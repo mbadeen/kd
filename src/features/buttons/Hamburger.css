@@ -1,0 +1,15 @@
+.hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.bar {
+  background-color: #fff;
+  padding: 0.1rem 0;
+  margin: 0.2rem 0;
+  width: 2.25rem;
+}

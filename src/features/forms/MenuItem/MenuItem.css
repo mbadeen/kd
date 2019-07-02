@@ -1,0 +1,30 @@
+.container {
+  border: 0.1rem solid #eeeeee;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 5rem auto 0 auto;
+  width: 90%;
+  max-width: 70rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  padding-left: 2rem;
+}
+
+.hr {
+  background-color: #eeeeee;
+  border: none;
+  padding: 0.05rem;
+  margin: 1rem 0;
+}
+
+.descriptionWrapper {
+  height: 12rem;
+  overflow-y: auto;
+}
