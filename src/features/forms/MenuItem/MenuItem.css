@@ -2,7 +2,7 @@
   border: 0.1rem solid #eeeeee;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1.5rem;
   margin: 5rem auto 0 auto;
   width: 90%;
   max-width: 70rem;
@@ -21,7 +21,7 @@
   background-color: #eeeeee;
   border: none;
   padding: 0.05rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .descriptionWrapper {

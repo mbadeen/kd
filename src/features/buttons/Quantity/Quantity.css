@@ -1,25 +1,26 @@
 .container {
   display: flex;
   margin: 2rem 0 0 auto;
-  width: 12rem;
+  width: 12.5rem;
 }
 
 .quantity,
 .decrement,
 .increment {
-  border: none;
   font-size: 1.5rem;
-  width: 4rem;
   height: 3.5rem;
 }
 
 .decrement,
 .increment {
   background-color: #008080;
+  border: none;
   color: #fff;
+  width: 4rem;
 }
 
 .quantity {
+  width: 4.5rem;
   border: 0.1rem solid #008080;
   text-align: center;
 }
