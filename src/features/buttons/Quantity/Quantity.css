@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  margin: 2rem 0 0 auto;
   width: 12.5rem;
 }
 
@@ -8,7 +7,7 @@
 .decrement,
 .increment {
   font-size: 1.5rem;
-  height: 3.5rem;
+  height: 3rem;
 }
 
 .decrement,

@@ -1,4 +1,16 @@
 .container {
+  align-items: center;
   display: flex;
   flex-direction: column;
+}
+
+.title {
+  padding: 5rem 0;
+}
+
+.content {
+  width: 92%;
+  max-width: 70rem;
+  flex-wrap: wrap;
+  padding-bottom: 5rem;
 }

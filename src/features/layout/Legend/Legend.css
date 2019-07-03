@@ -1,0 +1,15 @@
+.legend {
+  box-shadow: 0 0.05rem 0.75rem 0.05rem #b2b2b2;
+  list-style: none;
+  font-size: 1.5rem;
+  width: 25rem;
+  padding: 0;
+  margin-bottom: 5rem;
+}
+
+.legend > li {
+  border-bottom: 0.1rem solid #eeeeee;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
