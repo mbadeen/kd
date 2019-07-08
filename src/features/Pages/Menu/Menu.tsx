@@ -14,7 +14,11 @@ const Menu: React.FC = (): JSX.Element => (
       </p>
     </article>
     <Legend />
-    <MenuItem />
+    <MenuItem
+      name="Chicken"
+      price="13"
+      description="This is a description of the chicken dish, not sure what to put here because I am not a chef."
+    />
   </section>
 )
 

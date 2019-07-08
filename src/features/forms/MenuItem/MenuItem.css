@@ -1,7 +1,7 @@
 .container {
   box-shadow: 0 0.05rem 0.75rem 0.05rem #b2b2b2;
-  width: 92%;
-  max-width: 70rem;
+  margin: 2rem 0;
+  width: 100%;
 }
 
 .item {
@@ -16,7 +16,7 @@
 }
 
 .description {
-  height: 10rem;
+  height: 12rem;
   overflow-y: auto;
   padding: 1.5rem;
 }

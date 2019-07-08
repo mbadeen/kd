@@ -2,15 +2,17 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin: auto;
+  max-width: 70rem;
+  padding: 2rem;
 }
 
 .title {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 .content {
-  width: 92%;
-  max-width: 70rem;
+  width: 100%;
   flex-wrap: wrap;
-  padding-bottom: 5rem;
+  padding: 2rem 0;
 }
