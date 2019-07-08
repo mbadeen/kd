@@ -20,6 +20,7 @@ module.exports = {
   },
   rules: {
     'import/no-extraneous-dependencies': 'off',
+    'react/destructuring-assignment': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn'
   },

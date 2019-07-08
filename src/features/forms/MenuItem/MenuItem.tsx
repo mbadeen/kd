@@ -1,5 +1,4 @@
 import React from 'react'
-import { ProgressPlugin } from 'webpack'
 import Options from '../Options'
 import styles from './MenuItem.css'
 
