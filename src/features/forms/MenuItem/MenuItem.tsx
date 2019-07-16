@@ -9,16 +9,16 @@ interface Props {
 }
 
 const MenuItem: React.FC<Props> = (props: Props): JSX.Element => (
-  <div className={styles.container}>
-    <div className={styles.item}>
+  <article className={styles.container}>
+    <header className={styles.item}>
       <h2>{props.name}</h2>
       <h2 className={styles.price}>{props.price}</h2>
-    </div>
+    </header>
     <div className={styles.description}>
       <p>{props.description}</p>
     </div>
     <Options />
-  </div>
+  </article>
 )
 
 export default MenuItem

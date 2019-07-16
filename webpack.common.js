@@ -22,7 +22,7 @@ module.exports = {
       {
         test: /\.ts(x?)$/,
         resolve: {
-          extensions: ['.tsx', '.ts', '.js']
+          extensions: ['.tsx', '.ts', '.js', '.json']
         },
         exclude: /node_modules/,
         use: {
@@ -35,7 +35,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'assets/[name].[ext]'
+              name: '[path][name].[ext]'
             }
           }
         ]

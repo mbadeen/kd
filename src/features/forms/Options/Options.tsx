@@ -3,7 +3,7 @@ import Quantity from '../../buttons/Quantity'
 import styles from './Options.css'
 
 const Options: React.FC = (): JSX.Element => (
-  <div className={styles.container}>
+  <footer className={styles.container}>
     <div className={styles.options}>
       <label className={styles.optionsLabel} htmlFor="extra">
         <input className={styles.optionsCheckbox} type="checkbox" name="extra" />
@@ -15,7 +15,7 @@ const Options: React.FC = (): JSX.Element => (
       </label>
     </div>
     <Quantity />
-  </div>
+  </footer>
 )
 
 export default Options

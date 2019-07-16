@@ -1,7 +1,10 @@
-export const FETCH_MENU = 'FETCH_MENU'
+import { MenuItem } from '../state'
 
-interface fetchMenuAction {
-  type: typeof FETCH_MENU
+export const SET_MENU = 'SET_MENU'
+
+interface FetchMenuAction {
+  type: typeof SET_MENU
+  payload: MenuItem[]
 }
 
-export type menuActionTypes = fetchMenuAction
+export type MenuActionTypes = FetchMenuAction

@@ -9,6 +9,10 @@
         "spicy": false,
         "vegetarian": true,
         "vegan": true
+      },
+      "specialRequests": {
+        "extra": false,
+        "glutenFree": false
       }
     },
     "item2": {
@@ -22,8 +26,8 @@
         "vegan": false
       },
       "specialRequests": {
-        "extraChicken": true,
-        "pastaSide": true
+        "extra": true,
+        "glutenFree": false
       }
     },
     "item3": {
@@ -37,7 +41,8 @@
         "vegan": false
       },
       "specialRequests": {
-        "extraRibs": false
+        "extra": false,
+        "glutenFree": true
       }
     }
   }
