@@ -14,6 +14,7 @@
 
 export type MenuItem = {
   name: string
+  id: number
   price: number
   description: string
   specialFlags: SpecialFlags

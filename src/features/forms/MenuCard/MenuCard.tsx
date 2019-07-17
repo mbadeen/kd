@@ -1,5 +1,6 @@
 import React from 'react'
 import Options from '../Options'
+import Quantity from '../../buttons/Quantity'
 import styles from './MenuCard.css'
 
 interface Props {
@@ -10,14 +11,17 @@ interface Props {
 
 const MenuCard: React.FC<Props> = (props: Props): JSX.Element => (
   <article className={styles.container}>
-    <header className={styles.item}>
+    <header className={styles.header}>
       <h2>{props.name}</h2>
       <h2 className={styles.price}>{props.price}</h2>
     </header>
     <div className={styles.description}>
       <p>{props.description}</p>
     </div>
-    <Options />
+    <footer className={styles.footer}>
+      <Options />
+      <Quantity />
+    </footer>
   </article>
 )
 

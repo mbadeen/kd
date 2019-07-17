@@ -12,7 +12,7 @@ const Menu: React.FC = (): JSX.Element => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getMenu())
-  })
+  }, [dispatch])
 
   return (
     <section className={styles.container}>
@@ -26,7 +26,7 @@ const Menu: React.FC = (): JSX.Element => {
       </article>
       <Legend />
       {menu.map((menuItem: MenuItem) => (
-        <MenuCard name={menuItem.name} price={menuItem.price} description={menuItem.description} />
+        <MenuCard key={menuItem.id} name={menuItem.name} price={menuItem.price} description={menuItem.description} />
       ))}
     </section>
   )

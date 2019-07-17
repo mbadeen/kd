@@ -4,8 +4,16 @@
   width: 100%;
 }
 
-.item {
+.header {
   border-bottom: 0.1rem solid #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.footer {
+  align-items: center;
+  border-top: 0.1rem solid #eeeeee;
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;

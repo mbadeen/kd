@@ -1,6 +1,7 @@
 [
   {
     "name": "Zucchini and Mushroom Lasagna",
+    "id": 1,
     "price": "13",
     "description": "Layers of zucchini and yellow squash with wild mushroom in a delicious marinara sauce",
     "specialFlags": {
@@ -16,6 +17,7 @@
   },
   {
     "name": "Chicken Parmigiano",
+    "id": 2,
     "price": "16",
     "description": "Breaded chicken breast topped with basil, tomato and mozzarella cheese and a delicious marinara sauce, served with spaghetti squash",
     "specialFlags": {
@@ -31,6 +33,7 @@
   },
   {
     "name": "Braised Pork Ribs",
+    "id": 3,
     "price": "19",
     "description": "Pork ribs braised to perfection and topped with bbq sauce, served with a loaded baked potato and corn on the cob",
     "specialFlags": {
