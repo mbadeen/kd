@@ -31,3 +31,7 @@ export type SpecialRequests = {
   extra: boolean
   glutenFree: boolean
 }
+
+export type State = {
+  menu: MenuItem[]
+}

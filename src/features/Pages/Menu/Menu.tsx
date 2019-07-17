@@ -1,14 +1,18 @@
-import React from 'react'
-import MenuItem from '../../forms/MenuItem'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import MenuCard from '../../forms/MenuCard'
 import Legend from '../../layout/Legend'
+import { MenuItem, State } from '../../../redux/state'
+import { getMenu } from '../../../redux/actions/menuActions'
 import styles from './Menu.css'
-// import { getMenu } from '../../../redux/actions/menuActions'
 
 const Menu: React.FC = (): JSX.Element => {
-  //   useEffect(() => {
-  //     console.log('mounting')
-  //     getMenu()
-  //   })
+  const menu = useSelector((state: State) => state.menu)
+
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getMenu())
+  })
 
   return (
     <section className={styles.container}>
@@ -21,11 +25,9 @@ const Menu: React.FC = (): JSX.Element => {
         </p>
       </article>
       <Legend />
-      <MenuItem
-        name="Chicken"
-        price="13"
-        description="This is a description of the chicken dish, not sure what to put here because I am not a chef."
-      />
+      {menu.map((menuItem: MenuItem) => (
+        <MenuCard name={menuItem.name} price={menuItem.price} description={menuItem.description} />
+      ))}
     </section>
   )
 }
