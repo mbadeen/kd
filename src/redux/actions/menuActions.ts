@@ -12,5 +12,5 @@ export const getMenu = (): ThunkAction<void, MenuItem[], null, Action<string>> =
   fetch('http://localhost:3001/menu')
     .then((response: Response) => response.json())
     .then(data => dispatch(setMenu(data)))
-    .catch(error => console.log(error))
+    .catch(error => error)
 }
