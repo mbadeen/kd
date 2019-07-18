@@ -7,9 +7,10 @@ import { getMenu } from '../../../redux/actions/menuActions'
 import styles from './Menu.css'
 
 const Menu: React.FC = (): JSX.Element => {
-  const menu = useSelector((state: State) => state.menu)
+  const { menu } = useSelector((state: State) => state)
 
   const dispatch = useDispatch()
+
   useEffect(() => {
     dispatch(getMenu())
   }, [dispatch])

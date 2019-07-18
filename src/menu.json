@@ -1,8 +1,8 @@
 [
   {
     "name": "Zucchini and Mushroom Lasagna",
-    "id": 1,
-    "price": "13",
+    "id": 1001,
+    "price": 13,
     "description": "Layers of zucchini and yellow squash with wild mushroom in a delicious marinara sauce",
     "specialFlags": {
       "glutenFree": true,
@@ -11,30 +11,40 @@
       "vegan": true
     },
     "specialRequests": {
-      "extra": false,
-      "glutenFree": false
+      "extra": {
+        "type": null,
+        "price": null
+      },
+      "glutenFree": {
+        "price": null
+      }
     }
   },
   {
     "name": "Chicken Parmigiano",
-    "id": 2,
-    "price": "16",
+    "id": 1002,
+    "price": 16,
     "description": "Breaded chicken breast topped with basil, tomato and mozzarella cheese and a delicious marinara sauce, served with spaghetti squash",
     "specialFlags": {
-      "glutenFree": false,
+      "glutenFree": true,
       "spicy": false,
       "vegetarian": false,
       "vegan": false
     },
     "specialRequests": {
-      "extra": true,
-      "glutenFree": false
+      "extra": {
+        "type": "Chicken",
+        "price": 5
+      },
+      "glutenFree": {
+        "price": 4
+      }
     }
   },
   {
     "name": "Braised Pork Ribs",
-    "id": 3,
-    "price": "19",
+    "id": 1003,
+    "price": 19,
     "description": "Pork ribs braised to perfection and topped with bbq sauce, served with a loaded baked potato and corn on the cob",
     "specialFlags": {
       "glutenFree": false,
@@ -43,8 +53,13 @@
       "vegan": false
     },
     "specialRequests": {
-      "extra": false,
-      "glutenFree": true
+      "extra": {
+        "type": "Half Rack of Ribs",
+        "price": 8
+      },
+      "glutenFree": {
+        "price": null
+      }
     }
   }
 ]
