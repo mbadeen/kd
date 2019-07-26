@@ -28,3 +28,8 @@
   overflow-y: auto;
   padding: 1.5rem;
 }
+
+.options {
+  display: flex;
+  flex-direction: column;
+}

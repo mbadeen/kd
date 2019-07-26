@@ -18,7 +18,7 @@ export type MenuItem = {
   price: number
   description: string
   specialFlags: SpecialFlags
-  specialRequests: SpecialRequests
+  specialRequests: SpecialRequest[]
 }
 
 export type SpecialFlags = {
@@ -28,9 +28,10 @@ export type SpecialFlags = {
   vegan: boolean
 }
 
-export type SpecialRequests = {
-  extra: boolean
-  glutenFree: boolean
+export type SpecialRequest = {
+  id?: number
+  label?: string
+  price?: number
 }
 
 export type State = {
