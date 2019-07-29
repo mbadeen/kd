@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from './Legend.css'
 import gf from '../../../assets/icons/gf.png'
-// import gf from '../../../assets/icons/gf.png'
+import spicy from '../../../assets/icons/spicy.png'
+import vegan from '../../../assets/icons/vegan.png'
+import vegetarian from '../../../assets/icons/vegetarian.png'
 
 const Legend: React.FC = (): JSX.Element => {
   return (
@@ -13,13 +15,22 @@ const Legend: React.FC = (): JSX.Element => {
         </figure>
       </li>
       <li>
-        Vegetarian:<span>Veg</span>
+        Vegetarian:
+        <figure>
+          <img src={vegetarian} alt="Vegetarian" />
+        </figure>
       </li>
       <li>
-        Vegan:<span>V</span>
+        Vegan:
+        <figure>
+          <img src={vegan} alt="Vegan" />
+        </figure>
       </li>
       <li>
-        Spicy:<span>S</span>
+        Spicy:
+        <figure>
+          <img src={spicy} alt="Spicy" />
+        </figure>
       </li>
     </ul>
   )

@@ -9,6 +9,7 @@
 }
 
 .legend > li {
+  align-items: center;
   border-bottom: 0.1rem solid #eeeeee;
   display: flex;
   flex: auto;
