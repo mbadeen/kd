@@ -13,7 +13,7 @@ interface Props {
 
 const MenuItemCard: React.FC<Props> = (props: Props): JSX.Element => {
   return (
-    <article className={styles.menuCard}>
+    <article className={styles.card}>
       <header className={styles.header}>
         <h2>{props.name}</h2>
         <h2 className={styles.price}>{props.price}</h2>
