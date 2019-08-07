@@ -1,0 +1,32 @@
+.button {
+  background-color: #008080;
+  border: 0.1rem solid #008080;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.button:hover {
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #008080;
+}
+
+/* .button:focus {
+  transition: all 0.3s ease;
+  background-color: #008080;
+  border-color: #008080;
+}
+
+.button:active {
+  transition: all 0.3s ease;
+  background-color: #008080;
+  border-color: #008080;
+}
+
+.button:disabled {
+  transition: all 0.3s ease;
+  background-color: #008080;
+  opacity: 0.26;
+} */

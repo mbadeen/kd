@@ -17,15 +17,13 @@ export type MenuItem = {
   id: number
   price: number
   description: string
-  specialFlags: SpecialFlags
+  specialFlags: SpecialFlag[]
   specialRequests: SpecialRequest[]
 }
 
-export type SpecialFlags = {
-  glutenFree: boolean
-  spicy: boolean
-  vegetarian: boolean
-  vegan: boolean
+export type SpecialFlag = {
+  flag?: string
+  id?: number
 }
 
 export type SpecialRequest = {

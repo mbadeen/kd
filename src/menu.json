@@ -4,7 +4,16 @@
     "id": 1001,
     "price": 13,
     "description": "Layers of zucchini and yellow squash with wild mushroom in a delicious marinara sauce",
-    "specialFlags": ["glutenFree", "vegetarian"],
+    "specialFlags": [
+      {
+        "flag": "Gluten Free",
+        "id": 3001
+      },
+      {
+        "flag": "Vegetarian",
+        "id": 3002
+      }
+    ],
     "specialRequests": []
   },
   {
@@ -12,7 +21,12 @@
     "id": 1002,
     "price": 16,
     "description": "Breaded chicken breast topped with basil, tomato and mozzarella cheese and a delicious marinara sauce, served with spaghetti squash",
-    "specialFlags": ["glutenFree"],
+    "specialFlags": [
+      {
+        "flag": "Gluten Free",
+        "id": 3002
+      }
+    ],
     "specialRequests": [
       {
         "id": 2001,
@@ -31,7 +45,12 @@
     "id": 1003,
     "price": 19,
     "description": "Pork ribs braised to perfection and topped with bbq sauce, served with a loaded baked potato and corn on the cob",
-    "specialFlags": ["spicy"],
+    "specialFlags": [
+      {
+        "flag": "Spicy",
+        "id": 3003
+      }
+    ],
     "specialRequests": [
       {
         "id": 2003,

@@ -1,13 +1,17 @@
 import React from 'react'
 import Checkbox from '../../inputs/Checkbox'
 import Quantity from '../../buttons/Quantity'
-import { SpecialRequest } from '../../../redux/state'
+import ItemFlag from '../../layout/Legend/ItemFlag'
+import PrimaryButton from '../../buttons/PrimaryButton'
+import handleFlagMatch from '../../../util/functions'
+import { SpecialFlag, SpecialRequest } from '../../../redux/state'
 import styles from './MenuItemCard.css'
 
 interface Props {
   name: string
   price: number
   description: string
+  specialFlags: SpecialFlag[]
   specialRequests: SpecialRequest[]
 }
 
@@ -15,22 +19,31 @@ const MenuItemCard: React.FC<Props> = (props: Props): JSX.Element => {
   return (
     <article className={styles.card}>
       <header className={styles.header}>
-        <h2>{props.name}</h2>
-        <h2 className={styles.price}>{props.price}</h2>
-      </header>
-      <div className={styles.description}>
-        <p>{props.description}</p>
-      </div>
-      <footer className={styles.footer}>
-        <div className={styles.options}>
-          {props.specialRequests.map((specialRequest: SpecialRequest) => (
-            <Checkbox key={specialRequest.id} htmlFor="specialRequest" name="specialRequest">
-              {specialRequest.label} {specialRequest.price}
-            </Checkbox>
-          ))}
+        <div className={styles.item}>
+          <h2>{props.name}</h2>
+          <h2 className={styles.price}>{props.price}</h2>
         </div>
-
-        <Quantity />
+        <ul className={styles.flags}>
+          {props.specialFlags.map((specialFlag: SpecialFlag) => (
+            <ItemFlag key={specialFlag.id} src={handleFlagMatch(specialFlag.flag)} alt={specialFlag.flag} />
+          ))}
+        </ul>
+      </header>
+      <p className={styles.description}>{props.description}</p>
+      <footer className={styles.footer}>
+        {props.specialRequests.length !== 0 ? (
+          <div className={styles.options}>
+            {props.specialRequests.map((specialRequest: SpecialRequest) => (
+              <Checkbox key={specialRequest.id} htmlFor="specialRequest" name="specialRequest">
+                {specialRequest.label} {specialRequest.price}
+              </Checkbox>
+            ))}
+          </div>
+        ) : null}
+        <div className={styles.buttons}>
+          <Quantity />
+          <PrimaryButton text="Add to Cart" onClick={null} />
+        </div>
       </footer>
     </article>
   )

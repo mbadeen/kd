@@ -1,25 +1,22 @@
 .container {
   display: flex;
-  width: 12.5rem;
 }
 
-.quantity,
-.decrement,
-.increment {
+.button,
+.quantity {
   font-size: 1.5rem;
-  height: 3rem;
 }
 
-.decrement,
-.increment {
+.button {
   background-color: #008080;
-  border: none;
+  border: 0.1rem solid #008080;
   color: #fff;
-  width: 4rem;
+  padding: 1rem 2rem;
 }
 
 .quantity {
-  width: 4.5rem;
   border: 0.1rem solid #008080;
+  padding: 1rem;
   text-align: center;
+  width: 100%;
 }
