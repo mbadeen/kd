@@ -1,7 +1,7 @@
 import React from 'react'
 import Checkbox from '../../inputs/Checkbox'
 import Quantity from '../../buttons/Quantity'
-import ItemFlag from '../../layout/Legend/ItemFlag'
+import MenuItemFlag from '../../layout/Legend/MenuItemFlag'
 import PrimaryButton from '../../buttons/PrimaryButton'
 import handleFlagMatch from '../../../util/functions'
 import { SpecialFlag, SpecialRequest } from '../../../redux/state'
@@ -17,7 +17,7 @@ interface Props {
 
 const MenuItemCard: React.FC<Props> = (props: Props): JSX.Element => {
   return (
-    <article className={styles.card}>
+    <article className={styles.article}>
       <header className={styles.header}>
         <div className={styles.item}>
           <h2>{props.name}</h2>
@@ -25,7 +25,12 @@ const MenuItemCard: React.FC<Props> = (props: Props): JSX.Element => {
         </div>
         <ul className={styles.flags}>
           {props.specialFlags.map((specialFlag: SpecialFlag) => (
-            <ItemFlag key={specialFlag.id} src={handleFlagMatch(specialFlag.flag)} alt={specialFlag.flag} />
+            <MenuItemFlag
+              key={specialFlag.id}
+              description={specialFlag.flag}
+              src={handleFlagMatch(specialFlag.flag)}
+              alt={specialFlag.flag}
+            />
           ))}
         </ul>
       </header>

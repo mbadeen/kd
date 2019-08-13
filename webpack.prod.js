@@ -29,14 +29,24 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         use: [
+          //   {
+          //     loader: MiniCssExtractPlugin.loader,
+          //     options: {
+          //       publicPath: './dist'
+          //     }
+          //   },
+          //   {
+          //     loader: 'css-loader'
+          //   }
+          MiniCssExtractPlugin.loader,
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: 'css-loader',
             options: {
-              publicPath: './dist'
+              modules: {
+                localIdentName: '[name]-[local]-[hash:base64:5]'
+              },
+              sourceMap: true
             }
-          },
-          {
-            loader: 'css-loader'
           }
         ]
       }

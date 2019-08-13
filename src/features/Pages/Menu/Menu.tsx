@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import MenuItemCard from '../../forms/MenuItemCard'
-import Legend from '../../layout/Legend'
 import { MenuItem, State } from '../../../redux/state'
 import { getMenu } from '../../../redux/actions/menuActions'
 import styles from './Menu.css'
@@ -16,16 +15,15 @@ const Menu: React.FC = (): JSX.Element => {
   }, [dispatch])
 
   return (
-    <section className={styles.container}>
-      <h1 className={styles.title}>Menu 07/04/2019</h1>
-      <article className={styles.content}>
+    <section className={styles.section}>
+      <h1>Menu 07/04/2019</h1>
+      <article className={styles.article}>
         <h2>How it Works</h2>
         <p>
           How it works stuff goes here, I need a really long paragraph so I&#39;m going to sit here and try and try and
           try and try to type about nothing to fill up empty space for design purposes and such and so forth..
         </p>
       </article>
-      <Legend />
       {menu.map((menuItem: MenuItem) => (
         <MenuItemCard
           key={menuItem.id}

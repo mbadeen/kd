@@ -1,4 +1,4 @@
-.card {
+.article {
   box-shadow: 0 0.05rem 0.75rem 0.05rem #b2b2b2;
   margin: 2rem 0;
   width: 100%;
@@ -12,7 +12,7 @@
 .item {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .flags {
