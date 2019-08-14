@@ -12,6 +12,13 @@
 // 	Options:
 // }
 
+// export type LineItem = {
+// 	item: MenuItem,
+// 	quantity: number,
+// 	options: SpecialRequest[],
+// 	lineItemTotal: number
+// }
+
 export type MenuItem = {
   name: string
   id: number

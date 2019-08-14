@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import MenuItemCard from '../../forms/MenuItemCard'
-import { MenuItem, State } from '../../../redux/state'
-import { getMenu } from '../../../redux/actions/menuActions'
+import MenuItemCard from '../layout/MenuItemCard'
+import { MenuItem, State } from '../../redux/state'
+import { getMenu } from '../../redux/actions/menuActions'
 import styles from './Menu.css'
 
 const Menu: React.FC = (): JSX.Element => {
@@ -16,7 +16,8 @@ const Menu: React.FC = (): JSX.Element => {
 
   return (
     <section className={styles.section}>
-      <h1>Menu 07/04/2019</h1>
+      <h1>Menu</h1>
+      <h2>07/04/2019</h2>
       <article className={styles.article}>
         <h2>How it Works</h2>
         <p>

@@ -1,10 +1,10 @@
 import React from 'react'
-import Checkbox from '../../inputs/Checkbox'
-import Quantity from '../../buttons/Quantity'
-import MenuItemFlag from '../../layout/Legend/MenuItemFlag'
-import PrimaryButton from '../../buttons/PrimaryButton'
-import handleFlagMatch from '../../../util/functions'
-import { SpecialFlag, SpecialRequest } from '../../../redux/state'
+import Checkbox from '../inputs/Checkbox'
+import Quantity from '../buttons/Quantity'
+import MenuItemFlag from './MenuItemFlag'
+import PrimaryButton from '../buttons/PrimaryButton'
+import handleFlagMatch from '../../util/functions'
+import { SpecialFlag, SpecialRequest } from '../../redux/state'
 import styles from './MenuItemCard.css'
 
 interface Props {

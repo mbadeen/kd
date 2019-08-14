@@ -1,5 +1,5 @@
 import React from 'react'
-import Hamburger from '../../buttons/Hamburger'
+import Hamburger from '../buttons/Hamburger'
 import styles from './Header.css'
 
 const Header: React.FC = (): JSX.Element => {
