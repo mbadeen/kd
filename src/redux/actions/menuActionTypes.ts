@@ -1,10 +1,10 @@
-import { MenuItem } from '../state'
+import { Meal } from '../state'
 
 export const SET_MENU = 'SET_MENU'
 
-interface FetchMenuAction {
+export interface setMenuAction {
   type: typeof SET_MENU
-  payload: MenuItem[]
+  payload: Meal[]
 }
 
-export type MenuActionTypes = FetchMenuAction
+export type MenuActionTypes = setMenuAction

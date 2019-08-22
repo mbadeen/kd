@@ -29,6 +29,7 @@
 
 .price {
   padding-left: 2rem;
+  text-align: right;
 }
 
 .description {

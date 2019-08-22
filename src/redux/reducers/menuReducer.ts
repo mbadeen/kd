@@ -1,7 +1,7 @@
 import { SET_MENU, MenuActionTypes } from '../actions/menuActionTypes'
-import { MenuItem } from '../state'
+import { Meal } from '../state'
 
-const initialState: MenuItem[] = []
+const initialState: Meal[] = []
 
 const menuReducer = (state = initialState, action: MenuActionTypes) => {
   switch (action.type) {

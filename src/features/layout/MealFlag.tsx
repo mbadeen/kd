@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './MenuItemFlag.css'
+import styles from './MealFlag.css'
 
 interface Props {
   src: string
@@ -7,7 +7,7 @@ interface Props {
   description: string
 }
 
-const MenuItemFlag: React.FC<Props> = (props: Props): JSX.Element => {
+const MealFlag: React.FC<Props> = (props: Props): JSX.Element => {
   return (
     <li className={styles.li}>
       <img className={styles.img} src={props.src} alt={props.alt} />
@@ -16,4 +16,4 @@ const MenuItemFlag: React.FC<Props> = (props: Props): JSX.Element => {
   )
 }
 
-export default MenuItemFlag
+export default MealFlag

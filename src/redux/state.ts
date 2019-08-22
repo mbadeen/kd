@@ -12,14 +12,19 @@
 // 	Options:
 // }
 
-// export type LineItem = {
-// 	item: MenuItem,
-// 	quantity: number,
-// 	options: SpecialRequest[],
-// 	lineItemTotal: number
-// }
+export type LineItem = {
+  mealName: string
+  quantity: number
+  options?: SpecialRequest[]
+}
 
-export type MenuItem = {
+export type Cart = {
+  orderNumber: number
+  date: number
+  lineItems: LineItem[]
+}
+
+export type Meal = {
   name: string
   id: number
   price: number
@@ -40,5 +45,6 @@ export type SpecialRequest = {
 }
 
 export type State = {
-  menu: MenuItem[]
+  menu: Meal[]
+  lineItems: LineItem[]
 }

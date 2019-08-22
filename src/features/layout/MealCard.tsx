@@ -1,11 +1,13 @@
 import React from 'react'
 import Checkbox from '../inputs/Checkbox'
 import Quantity from '../buttons/Quantity'
-import MenuItemFlag from './MenuItemFlag'
+import MealFlag from './MealFlag'
+import { decrementQuantity, incrementQuantity } from '../../redux/actions/lineItemActionCreators'
 import PrimaryButton from '../buttons/PrimaryButton'
-import handleFlagMatch from '../../util/functions'
+import { handleFlagMatch } from '../../util/functions'
 import { SpecialFlag, SpecialRequest } from '../../redux/state'
-import styles from './MenuItemCard.css'
+
+import styles from './MealCard.css'
 
 interface Props {
   name: string
@@ -13,19 +15,20 @@ interface Props {
   description: string
   specialFlags: SpecialFlag[]
   specialRequests: SpecialRequest[]
+  quantity: number
 }
 
-const MenuItemCard: React.FC<Props> = (props: Props): JSX.Element => {
+const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
   return (
     <article className={styles.article}>
       <header className={styles.header}>
-        <div className={styles.item}>
-          <h2>{props.name}</h2>
-          <h2 className={styles.price}>{props.price}</h2>
-        </div>
+        <h2 className={styles.item}>
+          {props.name}
+          <span className={styles.price}>{props.price}</span>
+        </h2>
         <ul className={styles.flags}>
           {props.specialFlags.map((specialFlag: SpecialFlag) => (
-            <MenuItemFlag
+            <MealFlag
               key={specialFlag.id}
               description={specialFlag.flag}
               src={handleFlagMatch(specialFlag.flag)}
@@ -46,7 +49,11 @@ const MenuItemCard: React.FC<Props> = (props: Props): JSX.Element => {
           </div>
         ) : null}
         <div className={styles.buttons}>
-          <Quantity />
+          <Quantity
+            quantity={props.quantity}
+            decrement={decrementQuantity(props.name)}
+            increment={incrementQuantity(props.name)}
+          />
           <PrimaryButton text="Add to Cart" onClick={null} />
         </div>
       </footer>
@@ -54,4 +61,4 @@ const MenuItemCard: React.FC<Props> = (props: Props): JSX.Element => {
   )
 }
 
-export default MenuItemCard
+export default MealCard

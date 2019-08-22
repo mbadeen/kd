@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import MenuItemCard from '../layout/MenuItemCard'
-import { MenuItem, State } from '../../redux/state'
-import { getMenu } from '../../redux/actions/menuActions'
+import MealCard from '../layout/MealCard'
+import { Meal, LineItem, State } from '../../redux/state'
+import getMenuPageData from '../../redux/thunks'
+import { findLineItem } from '../../util/functions'
 import styles from './Menu.css'
 
 const Menu: React.FC = (): JSX.Element => {
   const menu = useSelector((state: State) => state.menu)
+  const lineItems = useSelector((state: State) => state.lineItems)
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getMenu())
+    dispatch(getMenuPageData())
   }, [dispatch])
 
   return (
@@ -25,16 +27,21 @@ const Menu: React.FC = (): JSX.Element => {
           try and try to type about nothing to fill up empty space for design purposes and such and so forth..
         </p>
       </article>
-      {menu.map((menuItem: MenuItem) => (
-        <MenuItemCard
-          key={menuItem.id}
-          name={menuItem.name}
-          price={menuItem.price}
-          description={menuItem.description}
-          specialFlags={menuItem.specialFlags}
-          specialRequests={menuItem.specialRequests}
-        />
-      ))}
+      {lineItems.length > 0 && menu.length > 0
+        ? menu.map((meal: Meal) => {
+            return (
+              <MealCard
+                key={meal.id}
+                name={meal.name}
+                price={meal.price}
+                description={meal.description}
+                specialFlags={meal.specialFlags}
+                specialRequests={meal.specialRequests}
+                quantity={lineItems.length > 0 && lineItems[findLineItem(lineItems, meal.name)].quantity}
+              />
+            )
+          })
+        : null}
     </section>
   )
 }
