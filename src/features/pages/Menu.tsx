@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import MealCard from '../layout/MealCard'
-import { Meal, LineItem, State } from '../../redux/state'
+import { Meal, State } from '../../redux/state'
 import getMenuPageData from '../../redux/thunks'
 import { findLineItem } from '../../util/functions'
 import styles from './Menu.css'
