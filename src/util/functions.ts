@@ -30,3 +30,19 @@ export const handleFlagMatch = (flag: string) => {
       return ''
   }
 }
+
+// Removes any non-digit characters.
+export const removeNonDigits = (value: string): string => value.replace(/[^0-9]/g, '')
+
+// For some reason js lets us change a string to a number using the + sign?
+export const convertStringToNumber = (value: string): number => +value
+
+export const checkBoundaries = (quantity: number): number => {
+  if (quantity < 0) {
+    return 0
+  } else if (quantity > 10) {
+    return 10
+  } else {
+    return quantity
+  }
+}

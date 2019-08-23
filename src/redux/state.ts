@@ -15,7 +15,7 @@
 export type LineItem = {
   mealName: string
   quantity: number
-  options?: SpecialRequest[]
+  options: SpecialRequest[]
 }
 
 export type Cart = {

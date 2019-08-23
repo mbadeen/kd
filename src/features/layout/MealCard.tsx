@@ -2,9 +2,9 @@ import React from 'react'
 import Checkbox from '../inputs/Checkbox'
 import Quantity from '../buttons/Quantity'
 import MealFlag from './MealFlag'
-import { decrementQuantity, incrementQuantity } from '../../redux/actions/lineItemActionCreators'
+import { changeQuantity, decrementQuantity, incrementQuantity } from '../../redux/actions/lineItemActionCreators'
 import PrimaryButton from '../buttons/PrimaryButton'
-import { handleFlagMatch } from '../../util/functions'
+import { handleFlagMatch, checkBoundaries } from '../../util/functions'
 import { SpecialFlag, SpecialRequest } from '../../redux/state'
 
 import styles from './MealCard.css'
@@ -50,9 +50,10 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
         ) : null}
         <div className={styles.buttons}>
           <Quantity
-            quantity={props.quantity}
             decrement={decrementQuantity(props.name)}
             increment={incrementQuantity(props.name)}
+            quantity={checkBoundaries(props.quantity)}
+            onChange={changeQuantity(props.name)}
           />
           <PrimaryButton text="Add to Cart" onClick={null} />
         </div>
