@@ -2,18 +2,15 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import MealCard from '../layout/MealCard'
 import { Meal, State } from '../../redux/state'
-import getMenuPageData from '../../redux/thunks'
-import { findLineItem } from '../../util/functions'
+import getMenu from '../../redux/thunks'
 import styles from './Menu.css'
 
 const Menu: React.FC = (): JSX.Element => {
   const menu = useSelector((state: State) => state.menu)
-  const lineItems = useSelector((state: State) => state.lineItems)
-
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getMenuPageData())
+    dispatch(getMenu())
   }, [dispatch])
 
   return (
@@ -27,7 +24,7 @@ const Menu: React.FC = (): JSX.Element => {
           try and try to type about nothing to fill up empty space for design purposes and such and so forth..
         </p>
       </article>
-      {lineItems.length > 0 && menu.length > 0
+      {menu.length > 0
         ? menu.map((meal: Meal) => {
             return (
               <MealCard
@@ -37,7 +34,6 @@ const Menu: React.FC = (): JSX.Element => {
                 description={meal.description}
                 specialFlags={meal.specialFlags}
                 specialRequests={meal.specialRequests}
-                quantity={lineItems.length > 0 && lineItems[findLineItem(lineItems, meal.name)].quantity}
               />
             )
           })

@@ -1,15 +1,9 @@
-import { LineItem } from '../redux/state'
-
 import gf from '../assets/icons/gf.png'
 import spicy from '../assets/icons/spicy.png'
 import vegan from '../assets/icons/vegan.png'
 import vegetarian from '../assets/icons/vegetarian.png'
 import nongmo from '../assets/icons/nongmo.png'
 import organic from '../assets/icons/organic.png'
-
-// Find a particular line item's index so we can supply it with data.
-export const findLineItem = (state: LineItem[], mealName: string) =>
-  state.findIndex(element => element.mealName === mealName)
 
 // Match special flags for a menu item with their corresponding images.
 export const handleFlagMatch = (flag: string) => {
@@ -37,7 +31,8 @@ export const removeNonDigits = (value: string): string => value.replace(/[^0-9]/
 // For some reason js lets us change a string to a number using the + sign?
 export const convertStringToNumber = (value: string): number => +value
 
-export const checkBoundaries = (quantity: number): number => {
+// Check if meal quantity is within range of 0-10.
+export const handleQuantityBoundaries = (quantity: number): number => {
   if (quantity < 0) {
     return 0
   } else if (quantity > 10) {

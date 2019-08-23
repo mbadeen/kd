@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Checkbox from '../inputs/Checkbox'
 import Quantity from '../buttons/Quantity'
 import MealFlag from './MealFlag'
-import { changeQuantity, decrementQuantity, incrementQuantity } from '../../redux/actions/lineItemActionCreators'
 import PrimaryButton from '../buttons/PrimaryButton'
-import { handleFlagMatch, checkBoundaries } from '../../util/functions'
+import { handleFlagMatch, handleQuantityBoundaries } from '../../util/functions'
 import { SpecialFlag, SpecialRequest } from '../../redux/state'
 
 import styles from './MealCard.css'
@@ -15,10 +14,10 @@ interface Props {
   description: string
   specialFlags: SpecialFlag[]
   specialRequests: SpecialRequest[]
-  quantity: number
 }
 
 const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
+  const [quantity, setQuantity] = useState(0)
   return (
     <article className={styles.article}>
       <header className={styles.header}>
@@ -49,12 +48,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           </div>
         ) : null}
         <div className={styles.buttons}>
-          <Quantity
-            decrement={decrementQuantity(props.name)}
-            increment={incrementQuantity(props.name)}
-            quantity={checkBoundaries(props.quantity)}
-            onChange={changeQuantity(props.name)}
-          />
+          <Quantity setQuantity={setQuantity} quantity={handleQuantityBoundaries(quantity)} />
           <PrimaryButton text="Add to Cart" onClick={null} />
         </div>
       </footer>
