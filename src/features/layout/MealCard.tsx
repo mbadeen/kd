@@ -18,6 +18,8 @@ interface Props {
 
 const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
   const [quantity, setQuantity] = useState(0)
+  const [options, setOptions] = useState({})
+
   return (
     <article className={styles.article}>
       <header className={styles.header}>
@@ -41,7 +43,13 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
         {props.specialRequests.length !== 0 ? (
           <div className={styles.options}>
             {props.specialRequests.map((specialRequest: SpecialRequest) => (
-              <Checkbox key={specialRequest.id} htmlFor="specialRequest" name="specialRequest">
+              <Checkbox
+                onChange={event => setOptions({ ...options, [event.currentTarget.name]: event.currentTarget.checked })}
+                value={specialRequest.label}
+                key={specialRequest.id}
+                htmlFor={specialRequest.label}
+                name={`${specialRequest.label} ${specialRequest.price}`}
+              >
                 {specialRequest.label} {specialRequest.price}
               </Checkbox>
             ))}

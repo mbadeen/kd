@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './PrimaryButton.css'
+import { OnClick } from '../types'
 
 interface Props {
   text: string
-  onClick: (event: React.MouseEvent) => void
+  onClick: OnClick
   disabled?: boolean
 }
 

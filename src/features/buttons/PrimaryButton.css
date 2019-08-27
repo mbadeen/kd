@@ -1,6 +1,6 @@
 .button {
-  background-color: #008080;
-  border: 0.1rem solid #008080;
+  background-color: #006e7d;
+  border: 0.1rem solid #006e7d;
   color: #fff;
   font-size: 1.5rem;
   padding: 1rem;
@@ -10,23 +10,23 @@
 .button:hover {
   transition: all 0.3s ease;
   background-color: #fff;
-  color: #008080;
+  color: #006e7d;
 }
 
 /* .button:focus {
   transition: all 0.3s ease;
-  background-color: #008080;
-  border-color: #008080;
+  background-color: #006e7d;
+  border-color: #006e7d;
 }
 
 .button:active {
   transition: all 0.3s ease;
-  background-color: #008080;
-  border-color: #008080;
+  background-color: #006e7d;
+  border-color: #006e7d;
 }
 
 .button:disabled {
   transition: all 0.3s ease;
-  background-color: #008080;
+  background-color: #006e7d;
   opacity: 0.26;
 } */

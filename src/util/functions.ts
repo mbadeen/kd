@@ -6,7 +6,7 @@ import nongmo from '../assets/icons/nongmo.png'
 import organic from '../assets/icons/organic.png'
 
 // Match special flags for a menu item with their corresponding images.
-export const handleFlagMatch = (flag: string) => {
+export const handleFlagMatch = (flag: string): string => {
   switch (flag) {
     case 'Gluten Free':
       return gf
