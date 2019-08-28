@@ -23,10 +23,10 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
   return (
     <article className={styles.article}>
       <header className={styles.header}>
-        <h2 className={styles.title}>
+        <h1 className={styles.title}>
           {props.name}
           <span className={styles.price}>{props.price}</span>
-        </h2>
+        </h1>
         <ul className={styles.flags}>
           {props.specialFlags.map((specialFlag: SpecialFlag) => (
             <MealFlag
@@ -49,9 +49,9 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
                     event.currentTarget.checked
                       ? [
                           ...options,
-                          { name: event.currentTarget.name, price: specialRequest.price, id: specialRequest.id }
+                          { id: specialRequest.id, label: event.currentTarget.name, price: specialRequest.price }
                         ]
-                      : options.filter(option => event.currentTarget.name !== option.name)
+                      : options.filter(option => event.currentTarget.name !== option.label)
                   )
                 }
                 value={specialRequest.label}
