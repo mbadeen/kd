@@ -23,7 +23,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
   return (
     <article className={styles.article}>
       <header className={styles.header}>
-        <h2 className={styles.item}>
+        <h2 className={styles.title}>
           {props.name}
           <span className={styles.price}>{props.price}</span>
         </h2>
