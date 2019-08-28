@@ -18,7 +18,7 @@ interface Props {
 
 const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
   const [quantity, setQuantity] = useState(0)
-  const [options, setOptions] = useState({})
+  const [options, setOptions] = useState([])
 
   return (
     <article className={styles.article}>
@@ -44,11 +44,20 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           <div className={styles.options}>
             {props.specialRequests.map((specialRequest: SpecialRequest) => (
               <Checkbox
-                onChange={event => setOptions({ ...options, [event.currentTarget.name]: event.currentTarget.checked })}
+                onChange={event =>
+                  setOptions(
+                    event.currentTarget.checked
+                      ? [
+                          ...options,
+                          { name: event.currentTarget.name, price: specialRequest.price, id: specialRequest.id }
+                        ]
+                      : options.filter(option => event.currentTarget.name !== option.name)
+                  )
+                }
                 value={specialRequest.label}
                 key={specialRequest.id}
                 htmlFor={specialRequest.label}
-                name={`${specialRequest.label} ${specialRequest.price}`}
+                name={specialRequest.label}
               >
                 {specialRequest.label} {specialRequest.price}
               </Checkbox>

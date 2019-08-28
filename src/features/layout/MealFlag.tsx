@@ -7,13 +7,11 @@ interface Props {
   description: string
 }
 
-const MealFlag: React.FC<Props> = (props: Props): JSX.Element => {
-  return (
-    <li className={styles.li}>
-      <img className={styles.img} src={props.src} alt={props.alt} />
-      {props.description}
-    </li>
-  )
-}
+const MealFlag: React.FC<Props> = (props: Props): JSX.Element => (
+  <li className={styles.li}>
+    <img className={styles.img} src={props.src} alt={props.alt} />
+    {props.description}
+  </li>
+)
 
 export default MealFlag

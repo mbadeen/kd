@@ -10,20 +10,18 @@ interface Props {
   onChange: OnChange
 }
 
-const Checkbox: React.FC<Props> = (props: Props): JSX.Element => {
-  return (
-    <label className={styles.label} htmlFor={props.htmlFor}>
-      <input
-        className={styles.checkbox}
-        type="checkbox"
-        name={props.name}
-        onChange={props.onChange}
-        value={props.value}
-      />
-      {props.children}
-    </label>
-  )
-}
+const Checkbox: React.FC<Props> = (props: Props): JSX.Element => (
+  <label className={styles.label} htmlFor={props.htmlFor}>
+    <input
+      className={styles.checkbox}
+      type="checkbox"
+      name={props.name}
+      onChange={props.onChange}
+      value={props.value}
+    />
+    {props.children}
+  </label>
+)
 
 export default Checkbox
 
