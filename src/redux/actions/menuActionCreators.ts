@@ -1,7 +1,7 @@
-import { SET_MENU, setMenuAction } from './menuActionTypes'
+import { SET_MENU, SetMenuAction } from './menuActionTypes'
 import { Meal } from '../state'
 
-const setMenu = (menu: Meal[]): setMenuAction => ({
+const setMenu = (menu: Meal[]): SetMenuAction => ({
   type: SET_MENU,
   payload: menu
 })

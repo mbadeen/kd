@@ -6,17 +6,13 @@
 
 // listOfOrders{date} [{order1}, {order2}]
 
-// LineItem {
-// 	MenuItem: {987-234-34-43-4}  / “Chicken Salad”
-// 	Quantity:
-// 	Options:
-// }
-
-// export type LineItem = {
-//   mealName: string
-//   quantity: number
-//   options: SpecialRequest[]
-// }
+export type LineItem = {
+  name?: string
+  id?: number
+  price?: number
+  quantity?: number
+  options?: SpecialRequest[]
+}
 
 // export type Cart = {
 //   orderNumber: number

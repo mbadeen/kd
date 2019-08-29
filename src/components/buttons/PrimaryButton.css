@@ -1,4 +1,5 @@
-.button {
+.button,
+.button[disabled]:hover {
   background-color: #006e7d;
   border: 0.1rem solid #006e7d;
   color: #fff;
@@ -11,6 +12,11 @@
   transition: all 0.3s ease;
   background-color: #fff;
   color: #006e7d;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  transition: all 0.3s ease;
 }
 
 /* .button:focus {

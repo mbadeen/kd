@@ -1,15 +1,18 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import addToCart from '../../redux/actions/cartActionCreators'
 import Checkbox from '../inputs/Checkbox'
 import Quantity from '../buttons/Quantity'
 import MealFlag from './MealFlag'
 import PrimaryButton from '../buttons/PrimaryButton'
-import { handleFlagMatch, handleQuantityBoundaries } from '../../util/functions'
+import { convertStringToNumber, handleFlagMatch, handleQuantityBoundaries, removeNonDigits } from '../../util/functions'
 import { SpecialFlag, SpecialRequest } from '../../redux/state'
 
 import styles from './MealCard.css'
 
 interface Props {
   name: string
+  id: number
   price: number
   description: string
   specialFlags: SpecialFlag[]
@@ -17,8 +20,11 @@ interface Props {
 }
 
 const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
+  const dispatch = useDispatch()
+
   const [quantity, setQuantity] = useState(0)
   const [options, setOptions] = useState([])
+  //   const [checked, setChecked] = useState(false)
 
   return (
     <article className={styles.article}>
@@ -44,6 +50,14 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           <div className={styles.options}>
             {props.specialRequests.map((specialRequest: SpecialRequest) => (
               <Checkbox
+                // checked={
+                //   options.findIndex(option => {
+                //     option.label === specialRequest.label
+                //   }) !== -1
+                //     ? true
+                //     : false
+                // }
+                // checked={options.findIndex(option => (option.label === specialRequest.label ? true : false))}
                 onChange={event =>
                   setOptions(
                     event.currentTarget.checked
@@ -65,8 +79,25 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           </div>
         ) : null}
         <div className={styles.buttons}>
-          <Quantity setQuantity={setQuantity} quantity={handleQuantityBoundaries(quantity)} />
-          <PrimaryButton text="Add to Cart" onClick={null} />
+          {/* <Quantity setQuantity={setQuantity} quantity={handleQuantityBoundaries(quantity)} /> */}
+          <Quantity
+            decrement={() => setQuantity(handleQuantityBoundaries(quantity - 1))}
+            increment={() => setQuantity(handleQuantityBoundaries(quantity + 1))}
+            onChange={event =>
+              setQuantity(handleQuantityBoundaries(convertStringToNumber(removeNonDigits(event.currentTarget.value))))
+            }
+            // placeholder="0"
+            value={quantity}
+          />
+          <PrimaryButton
+            text="Add to Cart"
+            onClick={() => {
+              dispatch(addToCart({ name: props.name, id: props.id, price: props.price, quantity, options })),
+                setQuantity(0),
+                setOptions([...options])
+            }}
+            disabled={quantity === 0}
+          />
         </div>
       </footer>
     </article>
