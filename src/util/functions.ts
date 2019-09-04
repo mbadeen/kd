@@ -31,12 +31,12 @@ export const removeNonDigits = (value: string): string => value.replace(/[^0-9]/
 // For some reason js lets us change a string to a number using the + sign?
 export const convertStringToNumber = (value: string): number => +value
 
-// Check if meal quantity is within range of 0-10.
-export const handleQuantityBoundaries = (quantity: number): number => {
-  if (quantity < 0) {
+// Handles the range for quantity boundaries.
+export const handleQuantityBoundaries = (quantity: number, lowerBoundary: number, upperBoundary: number): number => {
+  if (quantity < lowerBoundary) {
     return 0
-  } else if (quantity > 10) {
-    return 10
+  } else if (quantity > upperBoundary) {
+    return upperBoundary
   } else {
     return quantity
   }

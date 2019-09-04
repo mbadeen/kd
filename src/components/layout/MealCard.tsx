@@ -5,7 +5,7 @@ import Checkbox from '../inputs/Checkbox'
 import Quantity from '../buttons/Quantity'
 import MealFlag from './MealFlag'
 import PrimaryButton from '../buttons/PrimaryButton'
-import { convertStringToNumber, handleFlagMatch, handleQuantityBoundaries, removeNonDigits } from '../../util/functions'
+import { handleFlagMatch } from '../../util/functions'
 import { SpecialFlag, SpecialRequest } from '../../redux/state'
 
 import styles from './MealCard.css'
@@ -22,7 +22,7 @@ interface Props {
 const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
   const dispatch = useDispatch()
 
-  const [quantity, setQuantity] = useState(0)
+  const [quantity, setQuantity] = useState<number>(0)
   const [options, setOptions] = useState([])
 
   return (
@@ -60,7 +60,6 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
                       : options.filter(option => event.currentTarget.name !== option.label)
                   )
                 }
-                value={specialRequest.label}
                 key={specialRequest.id}
                 htmlFor={specialRequest.label}
                 name={specialRequest.label}
@@ -71,16 +70,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           </div>
         ) : null}
         <div className={styles.buttons}>
-          {/* <Quantity setQuantity={setQuantity} quantity={handleQuantityBoundaries(quantity)} /> */}
-          <Quantity
-            decrement={() => setQuantity(handleQuantityBoundaries(quantity - 1))}
-            increment={() => setQuantity(handleQuantityBoundaries(quantity + 1))}
-            onChange={event =>
-              setQuantity(handleQuantityBoundaries(convertStringToNumber(removeNonDigits(event.currentTarget.value))))
-            }
-            placeholder="0"
-            value={quantity}
-          />
+          <Quantity setQuantity={setQuantity} value={quantity} lowerBoundary={0} upperBoundary={10} />
           <PrimaryButton
             text="Add to Cart"
             onClick={() => {

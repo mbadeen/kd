@@ -29,6 +29,7 @@
     "mini-css-extract-plugin": "^0.7.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
     "redux-devtools-extension": "^2.13.8",
     "style-loader": "^0.23.1",
     "stylelint": "^10.1.0",
