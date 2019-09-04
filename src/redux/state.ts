@@ -7,10 +7,10 @@
 // listOfOrders{date} [{order1}, {order2}]
 
 export type LineItem = {
-  name?: string
-  id?: number
-  price?: number
-  quantity?: number
+  name: string
+  id: number
+  price: number
+  quantity: number
   options?: SpecialRequest[]
 }
 
