@@ -50,7 +50,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
             {props.specialRequests.map((specialRequest: SpecialRequest) => (
               <Checkbox
                 checked={options.find(option => (option.label === specialRequest.label ? true : false))}
-				onChange={event =>
+                onChange={event =>
                   setOptions(
                     event.currentTarget.checked
                       ? [
