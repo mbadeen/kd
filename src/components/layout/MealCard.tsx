@@ -24,7 +24,6 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
 
   const [quantity, setQuantity] = useState(0)
   const [options, setOptions] = useState([])
-  //   const [checked, setChecked] = useState(false)
 
   return (
     <article className={styles.article}>
@@ -50,15 +49,8 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           <div className={styles.options}>
             {props.specialRequests.map((specialRequest: SpecialRequest) => (
               <Checkbox
-                // checked={
-                //   options.findIndex(option => {
-                //     option.label === specialRequest.label
-                //   }) !== -1
-                //     ? true
-                //     : false
-                // }
-                // checked={options.findIndex(option => (option.label === specialRequest.label ? true : false))}
-                onChange={event =>
+                checked={options.find(option => (option.label === specialRequest.label ? true : false))}
+				onChange={event =>
                   setOptions(
                     event.currentTarget.checked
                       ? [
@@ -86,7 +78,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
             onChange={event =>
               setQuantity(handleQuantityBoundaries(convertStringToNumber(removeNonDigits(event.currentTarget.value))))
             }
-            // placeholder="0"
+            placeholder="0"
             value={quantity}
           />
           <PrimaryButton
@@ -94,7 +86,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
             onClick={() => {
               dispatch(addToCart({ name: props.name, id: props.id, price: props.price, quantity, options })),
                 setQuantity(0),
-                setOptions([...options])
+                setOptions([])
             }}
             disabled={quantity === 0}
           />

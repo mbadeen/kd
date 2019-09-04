@@ -31,6 +31,7 @@ interface Props {
   decrement: OnClick
   increment: OnClick
   onChange: OnChange
+  placeholder: string
   value: number
 }
 
@@ -39,7 +40,7 @@ const Quantity: React.FC<Props> = (props: Props): JSX.Element => (
     <button type="button" className={styles.button} onClick={props.decrement}>
       -
     </button>
-    <input className={styles.input} onChange={props.onChange} type="text" value={props.value} />
+    <input className={styles.input} onChange={props.onChange} placeholder={props.placeholder} type="text" value={props.value} />
     <button type="button" className={styles.button} onClick={props.increment}>
       +
     </button>
