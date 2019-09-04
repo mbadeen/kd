@@ -5,18 +5,18 @@
   color: #fff;
   font-size: 1.5rem;
   padding: 1rem;
+  transition: all 0.4s ease;
   width: 100%;
 }
 
 .button:hover {
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   background-color: #fff;
   color: #006e7d;
 }
 
 .button:disabled {
   opacity: 0.6;
-  transition: all 0.3s ease;
 }
 
 /* .button:focus {
