@@ -34,7 +34,7 @@ export const convertStringToNumber = (value: string): number => +value
 // Handles the range for quantity boundaries.
 export const handleQuantityBoundaries = (quantity: number, lowerBoundary: number, upperBoundary: number): number => {
   if (quantity < lowerBoundary) {
-    return 0
+    return lowerBoundary
   } else if (quantity > upperBoundary) {
     return upperBoundary
   } else {

@@ -42,4 +42,5 @@ export type SpecialRequest = {
 
 export type State = {
   menu: Meal[]
+  cart: LineItem[]
 }
