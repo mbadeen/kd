@@ -4,18 +4,17 @@
 
 .button,
 .input {
+  border: 0.1rem solid #006e7d;
   font-size: 1.5rem;
 }
 
 .button {
   background-color: #006e7d;
-  border: 0.1rem solid #006e7d;
   color: #fff;
   padding: 1rem 2rem;
 }
 
 .input {
-  border: 0.1rem solid #006e7d;
   padding: 1rem;
   text-align: center;
   width: 100%;
