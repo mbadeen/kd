@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import ShoppingCartSVG from '../../components/svg/ShoppingCartSVG'
+import ShoppingCartSVG from '../svg/ShoppingCartSVG'
 import styles from './CheckoutButton.css'
 import { State } from '../../redux/state'
 
