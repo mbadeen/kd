@@ -15,8 +15,8 @@ export type LineItem = {
 }
 
 // export type Cart = {
-//   orderNumber: number
-//   date: number
+//   orderId: number
+//   orderDate: number
 //   lineItems: LineItem[]
 // }
 
