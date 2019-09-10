@@ -9,7 +9,7 @@ const CheckoutButton: React.FC = (): JSX.Element => {
   const cart = useSelector((state: State) => state.cart)
 
   return cart.length > 0 ? (
-    <Link to="/cart" className={styles.button} role="button">
+    <Link to="/cart" className={styles.link} role="button">
       Checkout
       <ShoppingCartSVG />
       <span className={styles.span}>
@@ -17,14 +17,21 @@ const CheckoutButton: React.FC = (): JSX.Element => {
       </span>
     </Link>
   ) : null
-  //   return (
-  //     <button className={styles.button} disabled={cart.length === 0}>
-  //       <Link to="/cart" className={styles.link} role="button">
-  //         Checkout
-  //         <ShoppingCartSVG />
-  //       </Link>
-  //     </button>
-  //   )
 }
+
+//   return cart.length > 0 ? (
+//     <Link to="/cart" className={styles.link} role="button">
+//       Checkout
+//       <ShoppingCartSVG />
+//       <span className={styles.span}>
+//         {cart.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0)}
+//       </span>
+//     </Link>
+//   ) : (
+//     <button className={styles.button} disabled>
+//       Checkout <ShoppingCartSVG />
+//     </button>
+//   )
+// }
 
 export default CheckoutButton

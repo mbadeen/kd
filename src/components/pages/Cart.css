@@ -1,4 +1,17 @@
-.title {
-  text-align: center;
+.section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 70rem;
   padding: 2rem;
+}
+
+.article {
+  padding: 2rem 0;
+}
+
+.addressForm {
+  padding: 2rem 0;
+  width: 100%;
 }

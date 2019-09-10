@@ -1,7 +1,7 @@
-.button {
+.link {
   align-items: center;
-  animation-name: fadeIn;
   animation-duration: 2s;
+  animation-name: fadeIn;
   background-color: #005864;
   border: none;
   color: #fff;
@@ -13,7 +13,6 @@
   padding: 0 2rem;
   position: relative;
   text-decoration: none;
-  transition: all 0.4s ease;
 }
 
 .span {
@@ -27,6 +26,10 @@
   right: 1rem;
 }
 
+.button:disabled {
+  opacity: 0.6;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -36,31 +39,3 @@
     opacity: 1;
   }
 }
-
-/* .disabled {
-  cursor: default;
-  opacity: 0.6;
-} */
-
-/* .button {
-	background-color: #005864;
-	border: none;
-	margin: 0 2rem 0 auto;
-	padding: 0;
-	transition: all 0.4s ease;
-  }
-  
-  .button:disabled {
-	opacity: 0.6;
-  }
-  
-  .link {
-	align-items: center;
-	color: #fff;
-	display: flex;
-	font-size: 1.5rem;
-	height: 6rem;
-	justify-content: space-between;
-	padding: 0 2rem;
-	text-decoration: none;
-  } */

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import styles from './Checkbox.css'
+import styles from './Radio.css'
 import { OnChange } from '../types'
 
 interface Props {
@@ -9,9 +9,10 @@ interface Props {
   id: string
   name: string
   onChange: OnChange
+  value: string
 }
 
-const Checkbox: React.FC<Props> = (props: Props): JSX.Element => (
+const Radio: React.FC<Props> = (props: Props): JSX.Element => (
   <label className={styles.label} htmlFor={props.htmlFor}>
     <input
       checked={props.checked}
@@ -19,14 +20,15 @@ const Checkbox: React.FC<Props> = (props: Props): JSX.Element => (
       id={props.id}
       name={props.name}
       onChange={props.onChange}
-      type="checkbox"
+      type="radio"
+      value={props.value}
     />
     {props.children}
   </label>
 )
 
-export default Checkbox
+export default Radio
 
-Checkbox.defaultProps = {
+Radio.defaultProps = {
   children: undefined
 }

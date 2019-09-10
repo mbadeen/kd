@@ -62,6 +62,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
                 }
                 key={specialRequest.id}
                 htmlFor={specialRequest.label}
+                id={specialRequest.label}
                 name={specialRequest.label}
               >
                 {specialRequest.label} {specialRequest.price}
