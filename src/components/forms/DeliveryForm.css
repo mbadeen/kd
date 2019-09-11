@@ -1,0 +1,14 @@
+.form {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.radioGroup {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0 4rem 0;
+}
+
+.fieldWrap {
+  display: flex;
+}

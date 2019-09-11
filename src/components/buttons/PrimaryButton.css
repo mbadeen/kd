@@ -20,19 +20,19 @@
 }
 
 /* .button:focus {
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   background-color: #006e7d;
   border-color: #006e7d;
 }
 
 .button:active {
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   background-color: #006e7d;
   border-color: #006e7d;
 }
 
 .button:disabled {
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   background-color: #006e7d;
   opacity: 0.26;
 } */

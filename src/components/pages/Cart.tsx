@@ -1,6 +1,5 @@
 import React from 'react'
-import DeliveryTypeForm from '../forms/DeliveryTypeForm'
-import AddressForm from '../forms/AddressForm'
+import DeliveryForm from '../forms/DeliveryForm'
 import styles from './Cart.css'
 
 const Cart: React.FC = (): JSX.Element => {
@@ -14,8 +13,7 @@ const Cart: React.FC = (): JSX.Element => {
           use too much verbage. Or maybe we won&#39;t, maybe the radio buttons will be clear enough.
         </p>
       </article>
-      <DeliveryTypeForm />
-      <AddressForm />
+      <DeliveryForm />
     </section>
   )
 }

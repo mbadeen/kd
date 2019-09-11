@@ -8,30 +8,13 @@ import { State } from '../../redux/state'
 const CheckoutButton: React.FC = (): JSX.Element => {
   const cart = useSelector((state: State) => state.cart)
 
-  return cart.length > 0 ? (
+  return cart.lineItems.length > 0 ? (
     <Link to="/cart" className={styles.link} role="button">
       Checkout
       <ShoppingCartSVG />
-      <span className={styles.span}>
-        {cart.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0)}
-      </span>
+      <span className={styles.span}>{cart.totalQuantity}</span>
     </Link>
   ) : null
 }
-
-//   return cart.length > 0 ? (
-//     <Link to="/cart" className={styles.link} role="button">
-//       Checkout
-//       <ShoppingCartSVG />
-//       <span className={styles.span}>
-//         {cart.reduce((accumulator, currentValue) => accumulator + currentValue.quantity, 0)}
-//       </span>
-//     </Link>
-//   ) : (
-//     <button className={styles.button} disabled>
-//       Checkout <ShoppingCartSVG />
-//     </button>
-//   )
-// }
 
 export default CheckoutButton

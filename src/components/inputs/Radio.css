@@ -1,10 +1,8 @@
 .label,
 .labelChecked {
   font-size: 1.5rem;
-  font-weight: 600;
   padding: 1rem 4rem 1rem 1rem;
   position: relative;
-  text-transform: uppercase;
   transition: all 0.6s ease;
 }
 
