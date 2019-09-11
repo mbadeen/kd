@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import styles from './Radio.css'
+import CheckmarkSVG from '../svg/CheckmarkSVG'
 import { OnChange } from '../types'
 
 interface Props {
@@ -13,7 +14,7 @@ interface Props {
 }
 
 const Radio: React.FC<Props> = (props: Props): JSX.Element => (
-  <label className={styles.label} htmlFor={props.htmlFor}>
+  <label className={props.checked ? styles.labelChecked : styles.label} htmlFor={props.htmlFor}>
     <input
       checked={props.checked}
       className={styles.input}
@@ -23,6 +24,11 @@ const Radio: React.FC<Props> = (props: Props): JSX.Element => (
       type="radio"
       value={props.value}
     />
+    {props.checked ? (
+      <span className={styles.span}>
+        <CheckmarkSVG />
+      </span>
+    ) : null}
     {props.children}
   </label>
 )

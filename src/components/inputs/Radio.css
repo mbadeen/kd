@@ -1,12 +1,46 @@
-.label {
-  align-items: center;
-  display: flex;
+.label,
+.labelChecked {
   font-size: 1.5rem;
-  padding: 0.5rem 0;
+  font-weight: 600;
+  padding: 1rem 4rem 1rem 1rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.6s ease;
+}
+
+.label {
+  border: 0.1rem solid transparent;
+}
+
+.labelChecked {
+  border: 0.1rem solid #006e7d;
 }
 
 .input {
-  height: 2rem;
-  margin-right: 1rem;
-  width: 2rem;
+  opacity: 0;
+  position: absolute;
+}
+
+.span {
+  align-items: center;
+  animation-duration: 0.6s;
+  animation-name: fadeIn;
+  display: flex;
+  justify-content: center;
+  height: 3.9rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.6s ease;
+  width: 4rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
