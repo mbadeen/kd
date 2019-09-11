@@ -1,8 +1,7 @@
 import React from 'react'
 import DeliveryTypeForm from '../forms/DeliveryTypeForm'
+import AddressForm from '../forms/AddressForm'
 import styles from './Cart.css'
-
-import TextField from '../inputs/TextField'
 
 const Cart: React.FC = (): JSX.Element => {
   return (
@@ -16,12 +15,7 @@ const Cart: React.FC = (): JSX.Element => {
         </p>
       </article>
       <DeliveryTypeForm />
-      <form className={styles.addressForm}>
-        <TextField name="address" placeholder="Address" />
-        <TextField name="city" placeholder="City" />
-        <TextField name="state" placeholder="State" />
-        <TextField name="zip" placeholder="Zip" />
-      </form>
+      <AddressForm />
     </section>
   )
 }
