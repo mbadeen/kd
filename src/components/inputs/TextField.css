@@ -1,5 +1,5 @@
 .input {
-  border-bottom: 0.1rem solid #a8a8a8;
+  border-bottom: 0.1rem solid #b2b2b2;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -22,8 +22,7 @@
 }
 
 .input:disabled {
-  /* background-color: rgba(178, 178, 178, 0.2); */
-  /* background-color: #ededed; */
-  opacity: 0.2;
+  border-bottom: 0.1rem solid #ededed;
+  color: #000;
   transition: all 0.4s ease;
 }

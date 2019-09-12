@@ -1,11 +1,3 @@
-// Order {
-// 	orderNumber:
-// 	date:
-// 	LineItem[]
-// }
-
-// listOfOrders{date} [{order1}, {order2}]
-
 export type LineItem = {
   name: string
   id: number
@@ -15,14 +7,17 @@ export type LineItem = {
 }
 
 export type Address = {
-  address: string
+  street: string
   city: string
   state: string
-  zip: number
+  zip: string
 }
-export type DeliveryType = {
-  type: string
-  location: Address
+
+export type DeliveryType = 'Delivery' | 'Pickup'
+
+export type DeliveryForm = {
+  address: Address
+  deliveryType: DeliveryType
 }
 
 export type Cart = {
@@ -33,6 +28,7 @@ export type Cart = {
 
 export type Order = {
   deliveryType: DeliveryType
+  address: Address
   orderId: number
   orderDate: number
   cart: Cart
@@ -61,5 +57,6 @@ export type SpecialRequest = {
 export type State = {
   menu: Meal[]
   cart: Cart
+  deliveryForm: DeliveryForm
   order: Order
 }
