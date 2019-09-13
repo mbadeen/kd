@@ -1,11 +1,11 @@
 .article {
-  box-shadow: 0 0.05rem 0.75rem 0.05rem #b2b2b2;
+  box-shadow: 0 0.05rem 0.75rem 0.05rem #bdbdbd;
   margin: 2rem 0;
   width: 100%;
 }
 
 .header {
-  border-bottom: 0.1rem solid #eeeeee;
+  border-bottom: 0.1rem solid #eee;
   padding: 2rem;
 }
 
@@ -24,7 +24,7 @@
 .footer {
   display: flex;
   flex-direction: column;
-  border-top: 0.1rem solid #eeeeee;
+  border-top: 0.1rem solid #eee;
   padding: 2rem;
 }
 

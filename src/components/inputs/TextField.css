@@ -1,5 +1,5 @@
 .input {
-  border-bottom: 0.1rem solid #b2b2b2;
+  border-bottom: 0.1rem solid #bdbdbd;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -11,7 +11,7 @@
 }
 
 .input::placeholder {
-  color: #b2b2b2;
+  color: #dbdbdb;
   font-style: italic;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .input:disabled {
-  border-bottom: 0.1rem solid #ededed;
+  border-bottom: 0.1rem solid #eee;
   color: #000;
   transition: all 0.4s ease;
 }
