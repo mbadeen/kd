@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setDeliveryType, setStreet, setState, setCity, setZip } from '../../redux/actions/deliveryFormActionCreators'
 import Radio from '../inputs/Radio'
 import TextField from '../inputs/TextField'
+import pickupAddress from '../../util/constants'
 import styles from './DeliveryForm.css'
 import { State } from '../../redux/state'
 
@@ -12,13 +13,6 @@ const DeliveryForm: React.FC = (): JSX.Element => {
 
   const delivery: boolean = deliveryForm.deliveryType === 'Delivery'
   const pickup: boolean = deliveryForm.deliveryType === 'Pickup'
-
-  const pickupAddress = {
-    street: '150 North Center Street',
-    city: 'Northville',
-    state: 'MI',
-    zip: '48167'
-  }
 
   return (
     <form className={styles.form}>

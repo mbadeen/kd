@@ -6,7 +6,7 @@
 .radioGroup {
   display: flex;
   justify-content: space-evenly;
-  padding: 2rem 0 4rem 0;
+  padding-bottom: 2rem;
 }
 
 .fieldWrap {
