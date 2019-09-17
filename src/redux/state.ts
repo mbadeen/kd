@@ -44,7 +44,7 @@ export type Meal = {
 }
 
 export type SpecialFlag = {
-  flag?: string
+  flag?: 'Gluten Free' | 'Vegetarian' | 'Spicy'
   id?: number
 }
 

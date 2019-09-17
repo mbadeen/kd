@@ -3,7 +3,13 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: 70rem;
+  max-width: 75rem;
+  padding: 2rem;
+}
+
+.cart {
+  margin: auto;
+  max-width: 75rem;
   padding: 2rem;
 }
 

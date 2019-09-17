@@ -1,0 +1,28 @@
+.tr {
+  border-bottom: 0.1rem solid #eee;
+  vertical-align: top;
+}
+
+.tr > td {
+  padding: 2rem 0;
+  font-weight: 700;
+}
+
+.labels,
+.prices {
+  list-style: none;
+  padding: 0;
+}
+
+.labels > li {
+  font-size: 1.3rem;
+}
+
+.prices {
+  padding: 0;
+}
+
+.li {
+  padding-top: 1rem;
+  font-weight: 400;
+}

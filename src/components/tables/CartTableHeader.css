@@ -1,0 +1,8 @@
+.tr {
+  border-bottom: 0.1rem solid #eee;
+  color: #b3b3b3;
+  font-weight: 700;
+  font-size: 1.8rem;
+  height: 3.5rem;
+  text-transform: uppercase;
+}
