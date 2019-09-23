@@ -1,9 +1,11 @@
 export type LineItem = {
+  basePriceTotal?: number
   name: string
   id: number
-  price: number
+  unitPrice: number
   quantity: number
-  options?: SpecialRequest[]
+  options: SpecialRequest[]
+  lineItemTotal?: number
 }
 
 export type Address = {
@@ -37,7 +39,7 @@ export type Order = {
 export type Meal = {
   name: string
   id: number
-  price: number
+  unitPrice: number
   description: string
   specialFlags: SpecialFlag[]
   specialRequests: SpecialRequest[]
@@ -51,7 +53,8 @@ export type SpecialFlag = {
 export type SpecialRequest = {
   id?: number
   label?: string
-  price?: number
+  unitPrice?: number
+  optionsTotalPrice?: number
 }
 
 export type State = {

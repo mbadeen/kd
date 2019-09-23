@@ -2,7 +2,7 @@
   {
     "name": "Zucchini and Mushroom Lasagna",
     "id": 1001,
-    "price": 13,
+    "unitPrice": 13,
     "description": "Layers of zucchini and yellow squash with wild mushroom in a delicious marinara sauce",
     "specialFlags": [
       {
@@ -19,7 +19,7 @@
   {
     "name": "Chicken Parmigiano",
     "id": 1002,
-    "price": 16,
+    "unitPrice": 16,
     "description": "Breaded chicken breast topped with basil, tomato and mozzarella cheese and a delicious marinara sauce, served with spaghetti squash",
     "specialFlags": [
       {
@@ -31,19 +31,19 @@
       {
         "id": 2001,
         "label": "Extra Chicken",
-        "price": 6
+        "unitPrice": 6
       },
       {
         "id": 2002,
         "label": "Pasta Option",
-        "price": 5
+        "unitPrice": 5
       }
     ]
   },
   {
     "name": "Braised Pork Ribs",
     "id": 1003,
-    "price": 19,
+    "unitPrice": 19,
     "description": "Pork ribs braised to perfection and topped with bbq sauce, served with a loaded baked potato and corn on the cob",
     "specialFlags": [
       {
@@ -55,7 +55,7 @@
       {
         "id": 2003,
         "label": "Extra Half Rack",
-        "price": 9
+        "unitPrice": 9
       }
     ]
   }

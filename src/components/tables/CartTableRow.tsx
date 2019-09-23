@@ -3,17 +3,18 @@ import styles from './CartTableRow.css'
 import { SpecialRequest } from '../../redux/state'
 
 interface Props {
+  basePriceTotal: number
   name: string
-  quantity: number
-  price: number
   options: SpecialRequest[]
+  unitPrice: number
+  quantity: number
 }
 
 const CartTableRow: React.FC<Props> = (props: Props): JSX.Element => (
   <tr className={styles.tr}>
-    <td colSpan={3}>
+    <td>
       {props.name}
-      <ul className={styles.labels}>
+      <ul className={styles.optionLabelList}>
         {props.options.map((option: SpecialRequest) => (
           <li className={styles.li} key={option.id}>
             {option.label}
@@ -21,37 +22,28 @@ const CartTableRow: React.FC<Props> = (props: Props): JSX.Element => (
         ))}
       </ul>
     </td>
-    <td>{props.quantity}</td>
-    <td>
-      {props.price}
-      <ul className={styles.prices}>
+    <td className={styles.quantity}>{props.quantity}</td>
+    <td className={styles.unitPrice}>
+      {props.unitPrice}
+      <ul className={styles.optionPriceList}>
         {props.options.map((option: SpecialRequest) => (
           <li className={styles.li} key={option.id}>
-            {option.price}
+            {option.unitPrice}
+          </li>
+        ))}
+      </ul>
+    </td>
+    <td className={styles.totals}>
+      {props.basePriceTotal}
+      <ul className={styles.optionPriceList}>
+        {props.options.map((option: SpecialRequest) => (
+          <li className={styles.li} key={option.id}>
+            {option.optionsTotalPrice}
           </li>
         ))}
       </ul>
     </td>
   </tr>
 )
-
-// const CartTableRow: React.FC<Props> = (props: Props): JSX.Element => (
-//   <>
-//     <tr className={styles.tr}>
-//       <td colSpan={3}>{props.name}</td>
-//       <td>{props.quantity}</td>
-//       <td>{props.price}</td>
-//     </tr>
-//     <tr>
-//       {props.options.map((option: SpecialRequest) => (
-//         <>
-//           <td>{option.label}</td>
-//           <td />
-//           <td>{option.price}</td>
-//         </>
-//       ))}
-//     </tr>
-//   </>
-// )
 
 export default CartTableRow

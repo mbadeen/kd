@@ -1,5 +1,6 @@
-.input {
-  border-bottom: 0.1rem solid #b3b3b3;
+.input,
+.input[disabled]:hover {
+  border-bottom: 0.1rem solid #eee;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -22,7 +23,6 @@
 }
 
 .input:disabled {
-  border-bottom: 0.1rem solid #eee;
   color: #000;
   transition: all 0.4s ease;
 }

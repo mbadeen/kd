@@ -5,24 +5,31 @@
 
 .tr > td {
   padding: 2rem 0;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 
-.labels,
-.prices {
+.optionLabelList,
+.optionPriceList {
   list-style: none;
   padding: 0;
 }
 
-.labels > li {
-  font-size: 1.3rem;
-}
-
-.prices {
+.optionPriceList {
   padding: 0;
 }
 
 .li {
   padding-top: 1rem;
   font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.quantity,
+.unitPrice {
+  text-align: center;
+}
+
+.totals {
+  text-align: right;
 }

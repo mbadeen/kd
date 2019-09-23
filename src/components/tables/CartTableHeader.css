@@ -2,7 +2,27 @@
   border-bottom: 0.1rem solid #eee;
   color: #b3b3b3;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   height: 3.5rem;
   text-transform: uppercase;
+}
+
+.item {
+  width: 70%;
+}
+
+.price,
+.quantity,
+.unitPrice {
+  width: 10%;
+}
+
+.quantity,
+.unitPrice {
+  text-align: center;
+  width: 20%;
+}
+
+.price {
+  text-align: right;
 }

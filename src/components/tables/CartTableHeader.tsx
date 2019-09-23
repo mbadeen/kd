@@ -4,9 +4,10 @@ import styles from './CartTableHeader.css'
 const CartTableHeader: React.FC = (): JSX.Element => (
   <thead>
     <tr className={styles.tr}>
-      <td colSpan={3}>Item</td>
-      <td>Quantity</td>
-      <td>$</td>
+      <td className={styles.item}>Item</td>
+      <td className={styles.quantity}>Qty</td>
+      <td className={styles.unitPrice}>Unit</td>
+      <td className={styles.price}>$</td>
     </tr>
   </thead>
 )

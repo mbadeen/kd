@@ -17,7 +17,8 @@ const CartTable: React.FC = (): JSX.Element => {
             key={lineItem.id}
             name={lineItem.name}
             quantity={lineItem.quantity}
-            price={lineItem.price}
+            unitPrice={lineItem.unitPrice}
+            basePriceTotal={lineItem.basePriceTotal}
           />
         ))}
       </tbody>

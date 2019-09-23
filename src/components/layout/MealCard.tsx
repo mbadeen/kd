@@ -13,10 +13,10 @@ import styles from './MealCard.css'
 interface Props {
   name: string
   id: number
-  price: number
   description: string
   specialFlags: SpecialFlag[]
   specialRequests: SpecialRequest[]
+  unitPrice: number
 }
 
 const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
@@ -30,7 +30,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
       <header className={styles.header}>
         <h1 className={styles.title}>
           {props.name}
-          <span className={styles.price}>{props.price}</span>
+          <span className={styles.price}>{props.unitPrice}</span>
         </h1>
         <ul className={styles.flags}>
           {props.specialFlags.map((specialFlag: SpecialFlag) => (
@@ -59,13 +59,17 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
                     event.currentTarget.checked
                       ? [
                           ...options,
-                          { id: specialRequest.id, label: event.currentTarget.name, price: specialRequest.price }
+                          {
+                            id: specialRequest.id,
+                            label: event.currentTarget.name,
+                            unitPrice: specialRequest.unitPrice
+                          }
                         ]
                       : options.filter(option => event.currentTarget.name !== option.label)
                   )
                 }
               >
-                {specialRequest.label} {specialRequest.price}
+                {specialRequest.label} {specialRequest.unitPrice}
               </Checkbox>
             ))}
           </div>
@@ -75,7 +79,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           <PrimaryButton
             text="Add to Cart"
             onClick={() => {
-              dispatch(addToCart({ name: props.name, id: props.id, price: props.price, quantity, options })),
+              dispatch(addToCart({ name: props.name, id: props.id, unitPrice: props.unitPrice, quantity, options })),
                 setQuantity(0),
                 setOptions([])
             }}
