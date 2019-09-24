@@ -16,3 +16,25 @@
 .article {
   padding: 2rem 0;
 }
+
+.emptyCart {
+  height: calc(100vh - 6rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyCartTitle {
+  color: #b3b3b3;
+  font-size: 1.8rem;
+  padding: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* .hr {
+  background-color: #006e7d;
+  border: none;
+  padding: 0.01rem;
+  margin: 2rem;
+} */

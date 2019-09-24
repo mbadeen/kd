@@ -1,10 +1,14 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import DeliveryForm from '../forms/DeliveryForm'
 import CartTable from '../tables/CartTable'
 import styles from './Cart.css'
+import { State } from '../../redux/state'
 
 const Cart: React.FC = (): JSX.Element => {
-  return (
+  const lineItems = useSelector((state: State) => state.cart.lineItems)
+
+  return lineItems.length > 0 ? (
     <>
       <section className={styles.section}>
         <h1 className={styles.title}>Cart</h1>
@@ -17,10 +21,15 @@ const Cart: React.FC = (): JSX.Element => {
         </article>
         <DeliveryForm />
       </section>
+      {/* <hr className={styles.hr} /> */}
       <section className={styles.cart}>
         <CartTable />
       </section>
     </>
+  ) : (
+    <article className={styles.emptyCart}>
+      <h1 className={styles.emptyCartTitle}>There are no items in your cart</h1>
+    </article>
   )
 }
 

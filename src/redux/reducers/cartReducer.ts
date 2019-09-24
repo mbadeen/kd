@@ -22,22 +22,6 @@ const calculateTotalPrice = (accumulator: number, currentValue: LineItem) =>
 // Calculate the total quantity for a collection of LineItems.
 const calculateQuantity = (accumulator: number, currentValue: LineItem) => accumulator + currentValue.quantity
 
-// const cartReducer = (state = initialState, action: CartActionTypes) => {
-//   switch (action.type) {
-//     case ADD_TO_CART: {
-//       const lineItems = [...state.lineItems, action.payload]
-//       return {
-//         ...state,
-//         lineItems,
-//         totalPrice: lineItems.reduce(calculateTotalPrice, 0),
-//         totalQuantity: lineItems.reduce(calculateQuantity, 0)
-//       }
-//     }
-//     default:
-//       return state
-//   }
-// }
-
 const cartReducer = (state = initialState, action: CartActionTypes) => {
   switch (action.type) {
     case ADD_TO_CART: {

@@ -3,15 +3,16 @@ import { useSelector } from 'react-redux'
 import CartTableHeader from './CartTableHeader'
 import { State, LineItem } from '../../redux/state'
 import CartTableRow from './CartTableRow'
+import CarttableFooter from './CartTableFooter'
 import styles from './CartTable.css'
 
 const CartTable: React.FC = (): JSX.Element => {
-  const lineItems = useSelector((state: State) => state.cart.lineItems)
+  const cart = useSelector((state: State) => state.cart)
   return (
     <table className={styles.table}>
       <CartTableHeader />
       <tbody>
-        {lineItems.map((lineItem: LineItem) => (
+        {cart.lineItems.map((lineItem: LineItem) => (
           <CartTableRow
             options={lineItem.options}
             key={lineItem.id}
@@ -22,6 +23,7 @@ const CartTable: React.FC = (): JSX.Element => {
           />
         ))}
       </tbody>
+      <CarttableFooter total={cart.totalPrice} />
     </table>
   )
 }
