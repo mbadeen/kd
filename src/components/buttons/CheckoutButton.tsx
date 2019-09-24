@@ -10,7 +10,7 @@ const CheckoutButton: React.FC = (): JSX.Element => {
 
   return cart.lineItems.length > 0 ? (
     <Link to="/cart" className={styles.link} role="button">
-      Checkout
+      Cart
       <ShoppingCartSVG />
       <span className={styles.span}>{cart.totalQuantity}</span>
     </Link>
