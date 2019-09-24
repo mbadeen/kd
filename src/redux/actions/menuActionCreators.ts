@@ -1,4 +1,4 @@
-import { SET_MENU, SetMenuAction } from './menuActionTypes'
+import SET_MENU, { SetMenuAction } from './menuActionTypes'
 import { Meal } from '../state'
 
 const setMenu = (menu: Meal[]): SetMenuAction => ({

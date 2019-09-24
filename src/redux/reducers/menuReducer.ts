@@ -1,4 +1,4 @@
-import { SET_MENU, MenuActionTypes } from '../actions/menuActionTypes'
+import SET_MENU, { MenuActionTypes } from '../actions/menuActionTypes'
 import { Meal } from '../state'
 
 const initialState: Meal[] = []

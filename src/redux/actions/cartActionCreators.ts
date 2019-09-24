@@ -1,4 +1,4 @@
-import { ADD_TO_CART, AddToCartAction } from './cartActionTypes'
+import ADD_TO_CART, { AddToCartAction } from './cartActionTypes'
 import { LineItem } from '../state'
 
 const addToCart = (lineItem: LineItem): AddToCartAction => ({

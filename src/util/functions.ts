@@ -35,9 +35,9 @@ export const convertStringToNumber = (value: string): number => +value
 export const handleQuantityBoundaries = (quantity: number, lowerBoundary: number, upperBoundary: number): number => {
   if (quantity < lowerBoundary) {
     return lowerBoundary
-  } else if (quantity > upperBoundary) {
-    return upperBoundary
-  } else {
-    return quantity
   }
+  if (quantity > upperBoundary) {
+    return upperBoundary
+  }
+  return quantity
 }

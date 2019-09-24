@@ -1,4 +1,4 @@
-import { ADD_TO_CART, CartActionTypes } from '../actions/cartActionTypes'
+import ADD_TO_CART, { CartActionTypes } from '../actions/cartActionTypes'
 import { Cart, LineItem, SpecialRequest } from '../state'
 
 const initialState: Cart = {
