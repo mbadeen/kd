@@ -3,6 +3,7 @@
   font-family: verdana, sans-serif;
   letter-spacing: 0.1rem;
   margin: 0;
+  padding: 0;
 }
 
 html {
@@ -26,4 +27,29 @@ p,
 li {
   font-size: 1.5rem;
   line-height: 2.25rem;
+}
+
+@media (min-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p,
+  li {
+    font-size: 1.6rem;
+  }
 }

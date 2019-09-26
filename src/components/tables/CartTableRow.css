@@ -3,6 +3,10 @@
   vertical-align: top;
 }
 
+.tr:last-child {
+  border: none;
+}
+
 .tr > td {
   padding: 2rem 0;
   font-size: 1.4rem;
