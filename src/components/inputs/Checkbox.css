@@ -1,7 +1,6 @@
 .label {
-  /* align-items: center; */
+  align-items: center;
   display: flex;
-  font-size: 1.5rem;
   padding: 0.5rem 0;
 }
 

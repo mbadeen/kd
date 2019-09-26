@@ -10,6 +10,20 @@ html {
   font-size: 62.5%;
 }
 
+a,
+button,
+input,
+label,
+li,
+p {
+  font-size: 1.5rem;
+}
+
+li,
+p {
+  line-height: 2.25rem;
+}
+
 main {
   padding-top: 5.5rem;
   position: relative;
@@ -21,12 +35,6 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
-}
-
-p,
-li {
-  font-size: 1.5rem;
-  line-height: 2.25rem;
 }
 
 @media (min-width: 576px) {
@@ -48,8 +56,12 @@ li {
     font-size: 2rem;
   }
 
-  p,
-  li {
+  a,
+  button,
+  label,
+  li,
+  input,
+  p {
     font-size: 1.6rem;
   }
 }

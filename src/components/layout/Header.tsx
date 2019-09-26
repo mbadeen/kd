@@ -5,7 +5,7 @@ import styles from './Header.css'
 
 const Header: React.FC = (): JSX.Element => (
   <header className={styles.header}>
-    <h1 className={styles.title}>KD</h1>
+    <h1 className={styles.logo}>KD</h1>
     <CheckoutButton />
     <Hamburger />
   </header>
