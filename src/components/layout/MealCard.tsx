@@ -49,7 +49,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           <div className={styles.options}>
             {props.specialRequests.map((specialRequest: SpecialRequest) => (
               <Checkbox
-                checked={options.find(option => option.label === specialRequest.label)}
+                checked={!!options.find(option => option.label === specialRequest.label)}
                 htmlFor={specialRequest.label}
                 id={specialRequest.label}
                 key={specialRequest.id}
