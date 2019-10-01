@@ -46,8 +46,8 @@ export type Meal = {
 }
 
 export type SpecialFlag = {
-  flag?: 'Gluten Free' | 'Vegetarian' | 'Spicy'
-  id?: number
+  flag: 'Gluten Free' | 'Vegetarian' | 'Spicy'
+  id: number
 }
 
 export type SpecialRequest = {

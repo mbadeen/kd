@@ -11,7 +11,9 @@ import {
   SetZipAction
 } from './deliveryFormActionTypes'
 
-export const setDeliveryType = (deliveryType: string): SetDeliveryTypeAction => ({
+import { DeliveryType } from '../state'
+
+export const setDeliveryType = (deliveryType: DeliveryType): SetDeliveryTypeAction => ({
   type: SET_DELIVERY_TYPE,
   payload: deliveryType
 })

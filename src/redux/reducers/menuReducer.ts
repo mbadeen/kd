@@ -3,7 +3,7 @@ import { Meal } from '../state'
 
 const initialState: Meal[] = []
 
-const menuReducer = (state = initialState, action: MenuActionTypes) => {
+const menuReducer = (state = initialState, action: MenuActionTypes): Meal[] => {
   switch (action.type) {
     case SET_MENU:
       return action.payload

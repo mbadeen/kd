@@ -5,9 +5,9 @@ import { OnChange } from '../types'
 interface Props {
   checked: boolean
   children?: ReactNode
-  htmlFor: string
-  id: string
-  name: string
+  htmlFor?: string
+  id?: string
+  name?: string
   onChange: OnChange
 }
 

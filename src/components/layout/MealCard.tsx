@@ -23,7 +23,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
   const dispatch = useDispatch()
 
   const [quantity, setQuantity] = useState<number>(0)
-  const [options, setOptions] = useState([])
+  const [options, setOptions] = useState<SpecialRequest[]>([])
 
   return (
     <article className={styles.article}>

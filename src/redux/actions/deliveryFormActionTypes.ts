@@ -1,3 +1,5 @@
+import { DeliveryType } from '../state'
+
 export const SET_DELIVERY_TYPE = 'SET_DELIVERY_TYPE'
 export const SET_STREET = 'SET_STREET'
 export const SET_CITY = 'SET_CITY'
@@ -6,7 +8,7 @@ export const SET_ZIP = 'SET_ZIP'
 
 export interface SetDeliveryTypeAction {
   type: typeof SET_DELIVERY_TYPE
-  payload: string
+  payload: DeliveryType
 }
 
 export interface SetStreetAction {

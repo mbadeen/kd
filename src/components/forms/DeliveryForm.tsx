@@ -5,7 +5,7 @@ import Radio from '../inputs/Radio'
 import TextField from '../inputs/TextField'
 import pickupAddress from '../../util/constants'
 import styles from './DeliveryForm.css'
-import { State } from '../../redux/state'
+import { State, DeliveryType } from '../../redux/state'
 
 const DeliveryForm: React.FC = (): JSX.Element => {
   const deliveryForm = useSelector((state: State) => state.deliveryForm)
@@ -22,7 +22,7 @@ const DeliveryForm: React.FC = (): JSX.Element => {
           htmlFor="Pickup"
           id="Pickup"
           name="Pickup"
-          onChange={event => dispatch(setDeliveryType(event.currentTarget.value))}
+          onChange={event => dispatch(setDeliveryType(event.currentTarget.value as DeliveryType))}
           value="Pickup"
         >
           Pickup
@@ -32,7 +32,7 @@ const DeliveryForm: React.FC = (): JSX.Element => {
           htmlFor="Delivery"
           id="Delivery"
           name="Delivery"
-          onChange={event => dispatch(setDeliveryType(event.currentTarget.value))}
+          onChange={event => dispatch(setDeliveryType(event.currentTarget.value as DeliveryType))}
           value="Delivery"
         >
           Delivery

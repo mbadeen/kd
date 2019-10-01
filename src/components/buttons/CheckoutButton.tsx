@@ -5,7 +5,7 @@ import ShoppingCartSVG from '../svg/ShoppingCartSVG'
 import styles from './CheckoutButton.css'
 import { State } from '../../redux/state'
 
-const CheckoutButton: React.FC = (): JSX.Element => {
+const CheckoutButton: React.FC = (): JSX.Element | null => {
   const cart = useSelector((state: State) => state.cart)
 
   return cart.lineItems.length > 0 ? (

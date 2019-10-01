@@ -3,7 +3,7 @@ import styles from './CartTableRow.css'
 import { SpecialRequest } from '../../redux/state'
 
 interface Props {
-  basePriceTotal: number
+  basePriceTotal?: number
   name: string
   options: SpecialRequest[]
   unitPrice: number

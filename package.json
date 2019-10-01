@@ -6,6 +6,7 @@
   "author": "MB",
   "license": "MIT",
   "devDependencies": {
+    "@types/lodash": "^4.14.141",
     "@types/node": "^12.7.7",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
@@ -46,6 +47,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "history": "^4.10.1",
+    "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",

@@ -18,7 +18,7 @@ const initialState: DeliveryForm = {
   }
 }
 
-const deliveryFormReducer = (state = initialState, action: DeliveryFormActionTypes) => {
+const deliveryFormReducer = (state = initialState, action: DeliveryFormActionTypes): DeliveryForm => {
   switch (action.type) {
     case SET_DELIVERY_TYPE:
       return {
