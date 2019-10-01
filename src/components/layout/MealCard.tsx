@@ -33,45 +33,49 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           <span className={styles.price}>{props.unitPrice}</span>
         </h1>
         <ul className={styles.flags}>
-          {props.specialFlags.map((specialFlag: SpecialFlag) => (
-            <MealFlag
-              key={specialFlag.id}
-              description={specialFlag.flag}
-              src={handleFlagMatch(specialFlag.flag)}
-              alt={specialFlag.flag}
-            />
-          ))}
+          {props.specialFlags.map(
+            (specialFlag: SpecialFlag): JSX.Element => (
+              <MealFlag
+                key={specialFlag.id}
+                description={specialFlag.flag}
+                src={handleFlagMatch(specialFlag.flag)}
+                alt={specialFlag.flag}
+              />
+            )
+          )}
         </ul>
       </header>
       <p className={styles.description}>{props.description}</p>
       <footer className={styles.footer}>
         {props.specialRequests.length !== 0 ? (
           <div className={styles.options}>
-            {props.specialRequests.map((specialRequest: SpecialRequest) => (
-              <Checkbox
-                checked={!!options.find(option => option.label === specialRequest.label)}
-                htmlFor={specialRequest.label}
-                id={specialRequest.label}
-                key={specialRequest.id}
-                name={specialRequest.label}
-                onChange={event =>
-                  setOptions(
-                    event.currentTarget.checked
-                      ? [
-                          ...options,
-                          {
-                            id: specialRequest.id,
-                            label: event.currentTarget.name,
-                            unitPrice: specialRequest.unitPrice
-                          }
-                        ]
-                      : options.filter(option => event.currentTarget.name !== option.label)
-                  )
-                }
-              >
-                {specialRequest.label} {specialRequest.unitPrice}
-              </Checkbox>
-            ))}
+            {props.specialRequests.map(
+              (specialRequest: SpecialRequest): JSX.Element => (
+                <Checkbox
+                  checked={!!options.find(option => option.label === specialRequest.label)}
+                  htmlFor={specialRequest.label}
+                  id={specialRequest.label}
+                  key={specialRequest.id}
+                  name={specialRequest.label}
+                  onChange={event =>
+                    setOptions(
+                      event.currentTarget.checked
+                        ? [
+                            ...options,
+                            {
+                              id: specialRequest.id,
+                              label: event.currentTarget.name,
+                              unitPrice: specialRequest.unitPrice
+                            }
+                          ]
+                        : options.filter(option => event.currentTarget.name !== option.label)
+                    )
+                  }
+                >
+                  {specialRequest.label} {specialRequest.unitPrice}
+                </Checkbox>
+              )
+            )}
           </div>
         ) : null}
         <div className={styles.buttons}>

@@ -25,17 +25,19 @@ const Menu: React.FC = (): JSX.Element => {
         </p>
       </article>
       {menu.length > 0
-        ? menu.map((meal: Meal) => (
-            <MealCard
-              key={meal.id}
-              id={meal.id}
-              name={meal.name}
-              unitPrice={meal.unitPrice}
-              description={meal.description}
-              specialFlags={meal.specialFlags}
-              specialRequests={meal.specialRequests}
-            />
-          ))
+        ? menu.map(
+            (meal: Meal): JSX.Element => (
+              <MealCard
+                key={meal.id}
+                id={meal.id}
+                name={meal.name}
+                unitPrice={meal.unitPrice}
+                description={meal.description}
+                specialFlags={meal.specialFlags}
+                specialRequests={meal.specialRequests}
+              />
+            )
+          )
         : null}
     </section>
   )

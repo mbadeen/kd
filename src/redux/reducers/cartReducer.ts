@@ -1,6 +1,6 @@
-import _ from 'lodash'
 import ADD_TO_CART, { CartActionTypes } from '../actions/cartActionTypes'
 import { Cart, LineItem, SpecialRequest } from '../state'
+import _ from 'lodash'
 
 const initialState: Cart = {
   lineItems: [],
@@ -47,7 +47,7 @@ const addToCartTotals = (state = initialState, action: CartActionTypes): Cart =>
     )
   }
 
-  const lineItems: LineItem[] = newLineItems || [...state.lineItems, lineItem]
+  const lineItems: LineItem[] = newLineItems ? newLineItems : [...state.lineItems, lineItem]
 
   return {
     ...state,
