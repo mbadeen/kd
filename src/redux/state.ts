@@ -1,13 +1,3 @@
-export type LineItem = {
-  name: string
-  id: number
-  unitPrice: number
-  quantity: number
-  options: SpecialRequest[]
-}
-
-export type DeliveryType = 'Delivery' | 'Pickup'
-
 export type AddressForm = {
   deliveryType: DeliveryType
   street: string
@@ -16,13 +6,15 @@ export type AddressForm = {
   zip: string
 }
 
-// export type Order = {
-//   deliveryType: DeliveryType
-//   address: Address
-//   orderId: number
-//   orderDate: number
-//   cart: LineItem[]
-// }
+export type DeliveryType = 'Delivery' | 'Pickup'
+
+export type LineItem = {
+  name: string
+  id: number
+  unitPrice: number
+  quantity: number
+  options: SpecialRequest[]
+}
 
 export type Meal = {
   name: string
@@ -32,6 +24,14 @@ export type Meal = {
   specialFlags: SpecialFlag[]
   specialRequests: SpecialRequest[]
 }
+
+// export type Order = {
+//   deliveryType: DeliveryType
+//   address: Address
+//   orderId: number
+//   orderDate: number
+//   cart: LineItem[]
+// }
 
 export type SpecialFlag = {
   flag: 'Gluten Free' | 'Vegetarian' | 'Spicy'
