@@ -10,7 +10,6 @@ import { AddressForm } from '../state'
 
 const initialState: AddressForm = {
   deliveryType: 'Pickup',
-
   street: '',
   city: '',
   state: '',
