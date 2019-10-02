@@ -6,9 +6,6 @@ import nongmo from '../assets/icons/nongmo.png'
 import organic from '../assets/icons/organic.png'
 import { SpecialRequest, LineItem } from '../redux/state'
 
-// Calculate the base total for a single LineItem.
-// export const calculateBaseTotal = (unit: number, quantity: number): number => unit * quantity
-
 // Calculate total price for a collection of SpecialRequests.
 export const calculateOptionsTotal = (accumulator: number, currentValue: SpecialRequest): number =>
   accumulator + (currentValue.unitPrice || 0)
