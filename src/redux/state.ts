@@ -26,11 +26,10 @@ export type Meal = {
 }
 
 // export type Order = {
-//   deliveryType: DeliveryType
-//   address: Address
+//   address: AddressForm
+//   cart: LineItem[]
 //   orderId: number
 //   orderDate: number
-//   cart: LineItem[]
 // }
 
 export type SpecialFlag = {
