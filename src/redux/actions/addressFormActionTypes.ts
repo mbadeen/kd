@@ -28,7 +28,7 @@ export interface SetZipAction {
   payload: string
 }
 
-export type DeliveryFormActionTypes =
+export type AddressFormActionTypes =
   | SetDeliveryTypeAction
   | SetStreetAction
   | SetCityAction

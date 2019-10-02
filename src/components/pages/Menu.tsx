@@ -6,7 +6,7 @@ import getMenu from '../../redux/thunks'
 import styles from './Menu.css'
 
 const Menu: React.FC = (): JSX.Element => {
-  const menu = useSelector((state: State) => state.menu)
+  const menu = useSelector((state: State): Meal[] => state.menu)
   const dispatch = useDispatch()
 
   useEffect(() => {

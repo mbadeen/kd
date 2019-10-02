@@ -9,7 +9,7 @@ import {
   SetCityAction,
   SetStateAction,
   SetZipAction
-} from './deliveryFormActionTypes'
+} from './addressFormActionTypes'
 
 import { DeliveryType } from '../state'
 

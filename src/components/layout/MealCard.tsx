@@ -71,6 +71,20 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
                         : options.filter(option => event.currentTarget.name !== option.label)
                     )
                   }
+                  //   onChange={event =>
+                  //     setOptions((prevOptions: SpecialRequest[]) =>
+                  //       event.currentTarget.checked
+                  //         ? [
+                  //             ...prevOptions,
+                  //             {
+                  //               id: specialRequest.id,
+                  //               label: event.currentTarget.name,
+                  //               unitPrice: specialRequest.unitPrice
+                  //             }
+                  //           ]
+                  //         : prevOptions.filter(option => event.currentTarget.name !== option.label)
+                  //     )
+                  //   }
                 >
                   {specialRequest.label} {specialRequest.unitPrice}
                 </Checkbox>

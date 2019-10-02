@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './CartTableFooter.css'
 
 interface Props {
-  total: number
+  totalPrice: number
 }
 
 const CartTableFooter: React.FC<Props> = (props: Props): JSX.Element => (
@@ -12,7 +12,7 @@ const CartTableFooter: React.FC<Props> = (props: Props): JSX.Element => (
         Total:
       </th>
       <td colSpan={2} className={styles.price}>
-        {props.total}
+        {props.totalPrice}
       </td>
     </tr>
   </tfoot>

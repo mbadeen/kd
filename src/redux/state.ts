@@ -1,40 +1,28 @@
 export type LineItem = {
-  basePriceTotal?: number
   name: string
   id: number
   unitPrice: number
   quantity: number
   options: SpecialRequest[]
-  lineItemTotal?: number
 }
 
-export type Address = {
+export type DeliveryType = 'Delivery' | 'Pickup'
+
+export type AddressForm = {
+  deliveryType: DeliveryType
   street: string
   city: string
   state: string
   zip: string
 }
 
-export type DeliveryType = 'Delivery' | 'Pickup'
-
-export type DeliveryForm = {
-  address: Address
-  deliveryType: DeliveryType
-}
-
-export type Cart = {
-  lineItems: LineItem[]
-  totalPrice: number
-  totalQuantity: number
-}
-
-export type Order = {
-  deliveryType: DeliveryType
-  address: Address
-  orderId: number
-  orderDate: number
-  cart: Cart
-}
+// export type Order = {
+//   deliveryType: DeliveryType
+//   address: Address
+//   orderId: number
+//   orderDate: number
+//   cart: LineItem[]
+// }
 
 export type Meal = {
   name: string
@@ -51,15 +39,13 @@ export type SpecialFlag = {
 }
 
 export type SpecialRequest = {
-  id?: number
-  label?: string
+  id: number
+  label: string
   unitPrice?: number
-  optionsTotalPrice?: number
 }
 
 export type State = {
   menu: Meal[]
-  cart: Cart
-  deliveryForm: DeliveryForm
-  order: Order
+  cart: LineItem[]
+  addressForm: AddressForm
 }

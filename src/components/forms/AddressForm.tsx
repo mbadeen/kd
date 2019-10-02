@@ -1,18 +1,18 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setDeliveryType, setStreet, setState, setCity, setZip } from '../../redux/actions/deliveryFormActionCreators'
+import { setDeliveryType, setStreet, setState, setCity, setZip } from '../../redux/actions/addressFormActionCreators'
 import Radio from '../inputs/Radio'
 import TextField from '../inputs/TextField'
 import pickupAddress from '../../util/constants'
-import styles from './DeliveryForm.css'
-import { State, DeliveryType } from '../../redux/state'
+import styles from './AddressForm.css'
+import { State, DeliveryType, AddressForm } from '../../redux/state'
 
 const DeliveryForm: React.FC = (): JSX.Element => {
-  const deliveryForm = useSelector((state: State) => state.deliveryForm)
+  const addressForm = useSelector((state: State): AddressForm => state.addressForm)
   const dispatch = useDispatch()
 
-  const delivery: boolean = deliveryForm.deliveryType === 'Delivery'
-  const pickup: boolean = deliveryForm.deliveryType === 'Pickup'
+  const delivery: boolean = addressForm.deliveryType === 'Delivery'
+  const pickup: boolean = addressForm.deliveryType === 'Pickup'
 
   return (
     <form className={styles.form}>
@@ -43,14 +43,14 @@ const DeliveryForm: React.FC = (): JSX.Element => {
         name="street"
         onChange={event => dispatch(setStreet(event.currentTarget.value))}
         placeholder="Address"
-        value={pickup ? pickupAddress.street : deliveryForm.address.street}
+        value={pickup ? pickupAddress.street : addressForm.street}
       />
       <TextField
         disabled={pickup}
         name="city"
         onChange={event => dispatch(setCity(event.currentTarget.value))}
         placeholder="City"
-        value={pickup ? pickupAddress.city : deliveryForm.address.city}
+        value={pickup ? pickupAddress.city : addressForm.city}
       />
       <div className={styles.fieldWrap}>
         <TextField
@@ -60,7 +60,7 @@ const DeliveryForm: React.FC = (): JSX.Element => {
           name="state"
           onChange={event => dispatch(setState(event.currentTarget.value))}
           placeholder="State"
-          value={pickup ? pickupAddress.state : deliveryForm.address.state}
+          value={pickup ? pickupAddress.state : addressForm.state}
         />
         <TextField
           disabled={pickup}
@@ -69,7 +69,7 @@ const DeliveryForm: React.FC = (): JSX.Element => {
           name="zip"
           onChange={event => dispatch(setZip(event.currentTarget.value))}
           placeholder="Zip"
-          value={pickup ? pickupAddress.zip : deliveryForm.address.zip}
+          value={pickup ? pickupAddress.zip : addressForm.zip}
         />
       </div>
     </form>

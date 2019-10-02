@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
 import menuReducer from './menuReducer'
 import cartReducer from './cartReducer'
-import deliveryFormReducer from './deliveryFormReducer'
+import addressFormReducer from './addressFormReducer'
 
 const rootReducer = combineReducers({
   menu: menuReducer,
   cart: cartReducer,
-  deliveryForm: deliveryFormReducer
+  addressForm: addressFormReducer
 })
 
 export default rootReducer

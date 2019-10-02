@@ -4,6 +4,26 @@ import vegan from '../assets/icons/vegan.png'
 import vegetarian from '../assets/icons/vegetarian.png'
 import nongmo from '../assets/icons/nongmo.png'
 import organic from '../assets/icons/organic.png'
+import { SpecialRequest, LineItem } from '../redux/state'
+
+// Calculate the base total for a single LineItem.
+// export const calculateBaseTotal = (unit: number, quantity: number): number => unit * quantity
+
+// Calculate total price for a collection of SpecialRequests.
+export const calculateOptionsTotal = (accumulator: number, currentValue: SpecialRequest): number =>
+  accumulator + (currentValue.unitPrice || 0)
+
+// Calculate the total price for a single LineItem.
+export const calculateItemTotalPrice = (currentValue: LineItem): number =>
+  currentValue.quantity * (currentValue.unitPrice + currentValue.options.reduce(calculateOptionsTotal, 0))
+
+// Calculate total price for a collection of LineItems.
+export const calculateTotalPrice = (accumulator: number, currentValue: LineItem): number =>
+  accumulator + calculateItemTotalPrice(currentValue)
+
+// Calculate the total quantity for a collection of LineItems.
+export const calculateQuantity = (accumulator: number, currentValue: LineItem): number =>
+  accumulator + currentValue.quantity
 
 // Match special flags for a menu item with their corresponding images.
 export const handleFlagMatch = (flag: string): string => {

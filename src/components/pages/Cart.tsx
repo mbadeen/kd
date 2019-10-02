@@ -1,14 +1,14 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import DeliveryForm from '../forms/DeliveryForm'
+import DeliveryForm from '../forms/AddressForm'
 import CartTable from '../tables/CartTable'
 import styles from './Cart.css'
-import { State } from '../../redux/state'
+import { LineItem, State } from '../../redux/state'
 
 const Cart: React.FC = (): JSX.Element => {
-  const lineItems = useSelector((state: State) => state.cart.lineItems)
+  const cart = useSelector((state: State): LineItem[] => state.cart)
 
-  return lineItems.length > 0 ? (
+  return cart.length > 0 ? (
     <>
       <section className={styles.section}>
         <h1 className={styles.title}>Cart</h1>
