@@ -26,7 +26,7 @@ export type Meal = {
 }
 
 // export type Order = {
-//   address: AddressForm
+//   address: Address
 //   cart: LineItem[]
 //   orderId: number
 //   orderDate: number

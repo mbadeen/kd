@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './CartTableRow.css'
-import { SpecialRequest } from '../../redux/state'
+import { DeliveryType, SpecialRequest } from '../../redux/state'
 
 interface Props {
+  deliveryType: DeliveryType
   name: string
   options: SpecialRequest[]
   unitPrice: number

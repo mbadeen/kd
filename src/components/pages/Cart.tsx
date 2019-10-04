@@ -1,12 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import DeliveryForm from '../forms/AddressForm'
+import { cartSelector } from '../../redux/selectors'
+import AddressForm from '../forms/AddressForm'
 import CartTable from '../tables/CartTable'
 import styles from './Cart.css'
-import { LineItem, State } from '../../redux/state'
 
 const Cart: React.FC = (): JSX.Element => {
-  const cart = useSelector((state: State): LineItem[] => state.cart)
+  const cart = useSelector(cartSelector)
 
   return cart.length > 0 ? (
     <>
@@ -19,7 +19,7 @@ const Cart: React.FC = (): JSX.Element => {
             use too much verbage. Or maybe we won&#39;t, maybe the radio buttons will be clear enough.
           </p>
         </article>
-        <DeliveryForm />
+        <AddressForm />
       </section>
       <section className={styles.cart}>
         <CartTable />

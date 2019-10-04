@@ -57,34 +57,34 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
                   id={specialRequest.label}
                   key={specialRequest.id}
                   name={specialRequest.label}
-                  onChange={event =>
-                    setOptions(
-                      event.currentTarget.checked
-                        ? [
-                            ...options,
-                            {
-                              id: specialRequest.id,
-                              label: event.currentTarget.name,
-                              unitPrice: specialRequest.unitPrice
-                            }
-                          ]
-                        : options.filter(option => event.currentTarget.name !== option.label)
-                    )
-                  }
                   //   onChange={event =>
-                  //     setOptions((prevOptions: SpecialRequest[]) =>
+                  //     setOptions(
                   //       event.currentTarget.checked
                   //         ? [
-                  //             ...prevOptions,
+                  //             ...options,
                   //             {
                   //               id: specialRequest.id,
                   //               label: event.currentTarget.name,
                   //               unitPrice: specialRequest.unitPrice
                   //             }
                   //           ]
-                  //         : prevOptions.filter(option => event.currentTarget.name !== option.label)
+                  //         : options.filter(option => event.currentTarget.name !== option.label)
                   //     )
                   //   }
+                  onChange={() =>
+                    setOptions((prevOptions: SpecialRequest[]) =>
+                      !prevOptions.find(option => option.label === specialRequest.label)
+                        ? [
+                            ...prevOptions,
+                            {
+                              id: specialRequest.id,
+                              label: specialRequest.label,
+                              unitPrice: specialRequest.unitPrice
+                            }
+                          ]
+                        : prevOptions.filter(option => specialRequest.label !== option.label)
+                    )
+                  }
                 >
                   {specialRequest.label} {specialRequest.unitPrice}
                 </Checkbox>

@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { menuSelector } from '../../redux/selectors'
 import MealCard from '../layout/MealCard'
-import { Meal, State } from '../../redux/state'
+import { Meal } from '../../redux/state'
 import getMenu from '../../redux/thunks'
 import styles from './Menu.css'
 
 const Menu: React.FC = (): JSX.Element => {
-  const menu = useSelector((state: State): Meal[] => state.menu)
+  const menu = useSelector(menuSelector)
   const dispatch = useDispatch()
 
   useEffect(() => {

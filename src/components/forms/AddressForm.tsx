@@ -1,14 +1,15 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setDeliveryType, setStreet, setState, setCity, setZip } from '../../redux/actions/addressFormActionCreators'
+import { addressFormSelector } from '../../redux/selectors'
 import Radio from '../inputs/Radio'
 import TextField from '../inputs/TextField'
 import pickupAddress from '../../util/constants'
 import styles from './AddressForm.css'
-import { State, DeliveryType, AddressForm } from '../../redux/state'
+import { DeliveryType } from '../../redux/state'
 
-const DeliveryForm: React.FC = (): JSX.Element => {
-  const addressForm = useSelector((state: State): AddressForm => state.addressForm)
+const AddressForm: React.FC = (): JSX.Element => {
+  const addressForm = useSelector(addressFormSelector)
   const dispatch = useDispatch()
 
   const delivery: boolean = addressForm.deliveryType === 'Delivery'
@@ -76,4 +77,4 @@ const DeliveryForm: React.FC = (): JSX.Element => {
   )
 }
 
-export default DeliveryForm
+export default AddressForm
