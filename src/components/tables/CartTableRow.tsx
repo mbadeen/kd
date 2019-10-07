@@ -27,7 +27,7 @@ const CartTableRow: React.FC<Props> = (props: Props): JSX.Element => (
     <td className={styles.quantity}>{props.quantity}</td>
     <td className={styles.unitPrice}>
       {props.unitPrice}
-      <ul className={styles.optionPriceList}>
+      <ul>
         {props.options.map(
           (option: SpecialRequest): JSX.Element => (
             <li className={styles.li} key={option.id}>
@@ -40,7 +40,7 @@ const CartTableRow: React.FC<Props> = (props: Props): JSX.Element => (
 
     <td className={styles.totals}>
       {props.quantity * props.unitPrice}
-      <ul className={styles.optionPriceList}>
+      <ul>
         {props.options.map(
           (option: SpecialRequest): JSX.Element => (
             <li className={styles.li} key={option.id}>

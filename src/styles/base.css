@@ -19,14 +19,28 @@ p {
   font-size: 1.5rem;
 }
 
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
 li,
 p {
   line-height: 2.25rem;
 }
 
-main {
-  padding-top: 5.5rem;
-  position: relative;
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
 }
 
 h1 {

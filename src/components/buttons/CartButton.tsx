@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { cartSelector, totalQuantitySelector } from '../../redux/selectors'
 import ShoppingCartSVG from '../svg/ShoppingCartSVG'
-import styles from './CheckoutButton.css'
+import styles from './CartButton.css'
 
-const CheckoutButton: React.FC = (): JSX.Element | null => {
+const CartButton: React.FC = (): JSX.Element | null => {
   const cart = useSelector(cartSelector)
   const totalQuantity = useSelector(totalQuantitySelector)
 
@@ -18,4 +18,4 @@ const CheckoutButton: React.FC = (): JSX.Element | null => {
   ) : null
 }
 
-export default CheckoutButton
+export default CartButton
