@@ -13,10 +13,10 @@ const CartTable: React.FC = (): JSX.Element => {
 
   const [deliveryFee, setDeliveryFee] = useState<boolean>(false)
 
-  if (deliveryType === 'Delivery') {
-    if (deliveryFee === false) {
-      setDeliveryFee(true)
-    }
+  if (deliveryType === 'Delivery' && deliveryFee === false) {
+    // if (deliveryFee === false) {
+    setDeliveryFee(true)
+    // }
   }
 
   return (

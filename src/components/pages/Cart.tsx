@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { cartSelector } from '../../redux/selectors'
+import Section from '../layout/Section'
 import AddressForm from '../forms/AddressForm'
 import CartTable from '../tables/CartTable'
 import styles from './Cart.css'
@@ -10,7 +11,7 @@ const Cart: React.FC = (): JSX.Element => {
 
   return cart.length > 0 ? (
     <>
-      <section className={styles.section}>
+      <Section>
         <h1 className={styles.title}>Cart</h1>
         <article className={styles.article}>
           <h1>Delivery Options</h1>
@@ -20,10 +21,10 @@ const Cart: React.FC = (): JSX.Element => {
           </p>
         </article>
         <AddressForm />
-      </section>
-      <section className={styles.cart}>
+      </Section>
+      <Section>
         <CartTable />
-      </section>
+      </Section>
     </>
   ) : (
     <article className={styles.emptyCart}>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { menuSelector } from '../../redux/selectors'
+import Section from '../layout/Section'
 import MealCard from '../layout/MealCard'
 import { Meal } from '../../redux/state'
 import getMenu from '../../redux/thunks'
@@ -15,7 +16,7 @@ const Menu: React.FC = (): JSX.Element => {
   }, [dispatch])
 
   return (
-    <section className={styles.section}>
+    <Section>
       <h1>Menu</h1>
       <h2>07/04/2019</h2>
       <article className={styles.article}>
@@ -40,7 +41,7 @@ const Menu: React.FC = (): JSX.Element => {
             )
           )
         : null}
-    </section>
+    </Section>
   )
 }
 
