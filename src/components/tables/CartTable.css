@@ -6,7 +6,6 @@
 .tr {
   animation-duration: 0.5s;
   animation-name: fadeIn;
-  vertical-align: center;
   height: 5.8rem;
   font-size: 1.4rem;
   font-weight: 700;
