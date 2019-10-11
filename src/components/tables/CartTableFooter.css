@@ -1,9 +1,9 @@
 .tr {
-  border-bottom: 0.1rem solid #006e7d;
-  border-top: 0.1rem solid #006e7d;
+  border-bottom: 0.1rem solid #eee;
+  border-top: 0.1rem solid #eee;
   font-weight: 700;
   font-size: 1.6rem;
-  height: 3.5rem;
+  height: 5rem;
   text-transform: uppercase;
 }
 

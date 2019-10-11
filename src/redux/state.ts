@@ -10,7 +10,7 @@ export type DeliveryType = 'Delivery' | 'Pickup'
 
 export type LineItem = {
   name: string
-  id: number
+  id: string
   unitPrice: number
   quantity: number
   options: SpecialRequest[]

@@ -4,6 +4,7 @@ import { cartSelector } from '../../redux/selectors'
 import Section from '../layout/Section'
 import AddressForm from '../forms/AddressForm'
 import CartTable from '../tables/CartTable'
+import PrimaryButton from '../buttons/PrimaryButton'
 import styles from './Cart.css'
 
 const Cart: React.FC = (): JSX.Element => {
@@ -22,8 +23,12 @@ const Cart: React.FC = (): JSX.Element => {
         </article>
         <AddressForm />
       </Section>
+      <hr className={styles.hr} />
       <Section>
         <CartTable />
+        <div className={styles.button}>
+          <PrimaryButton text="Proceed to Checkout" onClick={() => null} />
+        </div>
       </Section>
     </>
   ) : (

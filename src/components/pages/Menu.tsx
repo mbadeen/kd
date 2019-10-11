@@ -31,7 +31,7 @@ const Menu: React.FC = (): JSX.Element => {
             (meal: Meal): JSX.Element => (
               <MealCard
                 key={meal.id}
-                id={meal.id}
+                id={meal.id.toString()}
                 name={meal.name}
                 unitPrice={meal.unitPrice}
                 description={meal.description}

@@ -12,7 +12,7 @@ import styles from './MealCard.css'
 
 interface Props {
   name: string
-  id: number
+  id: string
   description: string
   specialFlags: SpecialFlag[]
   specialRequests: SpecialRequest[]
@@ -73,7 +73,7 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
                   //   }
                   onChange={() =>
                     setOptions((prevOptions: SpecialRequest[]) =>
-                      !prevOptions.find(option => option.label === specialRequest.label)
+                      !prevOptions.find((option: SpecialRequest) => option.label === specialRequest.label)
                         ? [
                             ...prevOptions,
                             {
@@ -81,8 +81,8 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
                               label: specialRequest.label,
                               unitPrice: specialRequest.unitPrice
                             }
-                          ]
-                        : prevOptions.filter(option => specialRequest.label !== option.label)
+                          ].sort((a, b) => a.id - b.id)
+                        : prevOptions.filter((option: SpecialRequest) => specialRequest.label !== option.label)
                     )
                   }
                 >
@@ -97,7 +97,18 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           <PrimaryButton
             text="Add to Cart"
             onClick={() => {
-              dispatch(addToCart({ name: props.name, id: props.id, unitPrice: props.unitPrice, quantity, options }))
+              dispatch(
+                addToCart({
+                  name: props.name,
+                  id: `${props.id}${options.reduce(
+                    (accumulator, currentValue) => `${accumulator}${currentValue.id}`,
+                    ''
+                  )}`,
+                  unitPrice: props.unitPrice,
+                  quantity,
+                  options
+                })
+              )
               setQuantity(0)
               setOptions([])
             }}
