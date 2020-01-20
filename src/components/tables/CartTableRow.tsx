@@ -1,21 +1,20 @@
 import React from 'react';
 import styles from './CartTableRow.css';
-import { DeliveryType, SpecialRequest } from '../../redux/state';
+import { SpecialRequest } from '../../redux/state';
 
 interface Props {
-  deliveryType: DeliveryType;
   name: string;
   options: SpecialRequest[];
-  unitPrice: number;
   quantity: number;
+  unitPrice: number;
 }
 
-const CartTableRow: React.FC<Props> = (props: Props): JSX.Element => (
+const CartTableRow: React.FC<Props> = ({ name, options, quantity, unitPrice }: Props): JSX.Element => (
   <tr className={styles.tr}>
     <td>
-      {props.name}
+      {name}
       <ul className={styles.optionLabelList}>
-        {props.options.map(
+        {options.map(
           (option: SpecialRequest): JSX.Element => (
             <li className={styles.li} key={option.id}>
               {option.label}
@@ -24,11 +23,11 @@ const CartTableRow: React.FC<Props> = (props: Props): JSX.Element => (
         )}
       </ul>
     </td>
-    <td className={styles.quantity}>{props.quantity}</td>
+    <td className={styles.quantity}>{quantity}</td>
     <td className={styles.unitPrice}>
-      {props.unitPrice}
+      {unitPrice}
       <ul>
-        {props.options.map(
+        {options.map(
           (option: SpecialRequest): JSX.Element => (
             <li className={styles.li} key={option.id}>
               {option.unitPrice}
@@ -39,12 +38,12 @@ const CartTableRow: React.FC<Props> = (props: Props): JSX.Element => (
     </td>
 
     <td className={styles.totals}>
-      {props.quantity * props.unitPrice}
+      {quantity * unitPrice}
       <ul>
-        {props.options.map(
+        {options.map(
           (option: SpecialRequest): JSX.Element => (
             <li className={styles.li} key={option.id}>
-              {props.quantity * (option.unitPrice || 0)}
+              {quantity * (option.unitPrice || 0)}
             </li>
           )
         )}

@@ -3,33 +3,31 @@ import { removeNonDigits, convertStringToNumber, handleQuantityBoundaries } from
 import styles from './Quantity.css';
 
 interface Props {
-  setQuantity: React.Dispatch<React.SetStateAction<number>>;
-  value: number;
-  upperBoundary: number;
   lowerBoundary: number;
+  setQuantity: React.Dispatch<React.SetStateAction<number>>;
+  upperBoundary: number;
+  value: number;
 }
 
-const Quantity: React.FC<Props> = (props: Props): JSX.Element => (
+const Quantity: React.FC<Props> = ({ lowerBoundary, setQuantity, upperBoundary, value }: Props): JSX.Element => (
   <div className={styles.container}>
     <button
       type="button"
       className={styles.button}
-      onClick={() =>
-        props.setQuantity(handleQuantityBoundaries(props.value - 1, props.lowerBoundary, props.upperBoundary))
-      }
+      onClick={() => setQuantity(handleQuantityBoundaries(value - 1, lowerBoundary, upperBoundary))}
     >
       -
     </button>
     <input
       type="text"
       className={styles.input}
-      value={props.value}
+      value={value}
       onChange={event =>
-        props.setQuantity(
+        setQuantity(
           handleQuantityBoundaries(
             convertStringToNumber(removeNonDigits(event.target.value)),
-            props.lowerBoundary,
-            props.upperBoundary
+            lowerBoundary,
+            upperBoundary
           )
         )
       }
@@ -37,9 +35,7 @@ const Quantity: React.FC<Props> = (props: Props): JSX.Element => (
     <button
       type="button"
       className={styles.button}
-      onClick={() =>
-        props.setQuantity(handleQuantityBoundaries(props.value + 1, props.lowerBoundary, props.upperBoundary))
-      }
+      onClick={() => setQuantity(handleQuantityBoundaries(value + 1, lowerBoundary, upperBoundary))}
     >
       +
     </button>

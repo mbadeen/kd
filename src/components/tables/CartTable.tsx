@@ -29,7 +29,6 @@ const CartTable: React.FC = (): JSX.Element => {
               name={lineItem.name}
               quantity={lineItem.quantity}
               unitPrice={lineItem.unitPrice}
-              deliveryType={deliveryType}
             />
           )
         )}

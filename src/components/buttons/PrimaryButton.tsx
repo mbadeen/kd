@@ -3,14 +3,14 @@ import styles from './PrimaryButton.css';
 import { OnClick } from '../types';
 
 interface Props {
-  text: string;
-  onClick: OnClick;
   disabled?: boolean;
+  onClick: OnClick;
+  text: string;
 }
 
-const PrimaryButton: React.FC<Props> = (props: Props): JSX.Element => (
-  <button type="button" className={styles.button} disabled={props.disabled} onClick={props.onClick}>
-    {props.text}
+const PrimaryButton: React.FC<Props> = ({ disabled, onClick, text }: Props): JSX.Element => (
+  <button type="button" className={styles.button} disabled={disabled} onClick={onClick}>
+    {text}
   </button>
 );
 

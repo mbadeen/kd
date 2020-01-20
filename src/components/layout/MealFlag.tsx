@@ -2,15 +2,15 @@ import React from 'react';
 import styles from './MealFlag.css';
 
 interface Props {
-  src: string;
   alt: string;
   description: string;
+  src: string;
 }
 
-const MealFlag: React.FC<Props> = (props: Props): JSX.Element => (
+const MealFlag: React.FC<Props> = ({ alt, description, src }: Props): JSX.Element => (
   <li className={styles.li}>
-    <img className={styles.img} src={props.src} alt={props.alt} />
-    {props.description}
+    <img className={styles.img} src={src} alt={alt} />
+    {description}
   </li>
 );
 

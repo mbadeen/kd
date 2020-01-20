@@ -11,15 +11,22 @@ import { SpecialFlag, SpecialRequest } from '../../redux/state';
 import styles from './MealCard.css';
 
 interface Props {
-  name: string;
-  id: string;
   description: string;
+  id: string;
+  name: string;
   specialFlags: SpecialFlag[];
   specialRequests: SpecialRequest[];
   unitPrice: number;
 }
 
-const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
+const MealCard: React.FC<Props> = ({
+  description,
+  id,
+  name,
+  specialFlags,
+  specialRequests,
+  unitPrice
+}: Props): JSX.Element => {
   const dispatch = useDispatch();
 
   const [quantity, setQuantity] = useState<number>(0);
@@ -29,11 +36,11 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
     <article className={styles.article}>
       <header className={styles.header}>
         <h1 className={styles.title}>
-          {props.name}
-          <span className={styles.price}>{props.unitPrice}</span>
+          {name}
+          <span className={styles.price}>{unitPrice}</span>
         </h1>
         <ul className={styles.flags}>
-          {props.specialFlags.map(
+          {specialFlags.map(
             (specialFlag: SpecialFlag): JSX.Element => (
               <MealFlag
                 key={specialFlag.id}
@@ -45,11 +52,11 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
           )}
         </ul>
       </header>
-      <p className={styles.description}>{props.description}</p>
+      <p className={styles.description}>{description}</p>
       <footer className={styles.footer}>
-        {props.specialRequests.length !== 0 ? (
+        {specialRequests.length !== 0 ? (
           <div className={styles.options}>
-            {props.specialRequests.map(
+            {specialRequests.map(
               (specialRequest: SpecialRequest): JSX.Element => (
                 <Checkbox
                   checked={!!options.find(option => option.label === specialRequest.label)}
@@ -99,12 +106,9 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
             onClick={() => {
               dispatch(
                 addToCart({
-                  name: props.name,
-                  id: `${props.id}${options.reduce(
-                    (accumulator, currentValue) => `${accumulator}${currentValue.id}`,
-                    ''
-                  )}`,
-                  unitPrice: props.unitPrice,
+                  name,
+                  id: `${id}${options.reduce((accumulator, currentValue) => `${accumulator}${currentValue.id}`, '')}`,
+                  unitPrice,
                   quantity,
                   options
                 })

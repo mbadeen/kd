@@ -13,23 +13,23 @@ interface Props {
   value: string;
 }
 
-const Radio: React.FC<Props> = (props: Props): JSX.Element => (
-  <label className={props.checked ? styles.labelChecked : styles.label} htmlFor={props.htmlFor}>
+const Radio: React.FC<Props> = ({ checked, children, htmlFor, id, name, onChange, value }: Props): JSX.Element => (
+  <label className={checked ? styles.labelChecked : styles.label} htmlFor={htmlFor}>
     <input
-      checked={props.checked}
+      checked={checked}
       className={styles.input}
-      id={props.id}
-      name={props.name}
-      onChange={props.onChange}
+      id={id}
+      name={name}
+      onChange={onChange}
       type="radio"
-      value={props.value}
+      value={value}
     />
-    {props.checked ? (
+    {checked ? (
       <span className={styles.span}>
         <CheckmarkSVG />
       </span>
     ) : null}
-    {props.children}
+    {children}
   </label>
 );
 

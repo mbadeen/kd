@@ -5,6 +5,8 @@ interface Props {
   children: ReactNode;
 }
 
-const Main: React.FC<Props> = (props: Props): JSX.Element => <main className={styles.container}>{props.children}</main>;
+const Main: React.FC<Props> = ({ children }: Props): JSX.Element => (
+  <main className={styles.container}>{children}</main>
+);
 
 export default Main;
