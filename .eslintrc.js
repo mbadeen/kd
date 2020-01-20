@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   parser: '@typescript-eslint/parser',
   extends: [
     'airbnb-typescript',
@@ -21,13 +22,14 @@ module.exports = {
     }
   },
   rules: {
+    'no-unused-expressions': 'off',
     'prettier/prettier': 'error',
     'import/no-extraneous-dependencies': 'off',
     'react/destructuring-assignment': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn'
   },
-  plugins: ['react-hooks', 'prettier'],
+  plugins: ['@typescript-eslint', 'react-hooks', 'prettier'],
   settings: {
     react: {
       version: 'detect'
