@@ -1,13 +1,13 @@
-import React from 'react'
-import styles from './CartTableRow.css'
-import { DeliveryType, SpecialRequest } from '../../redux/state'
+import React from 'react';
+import styles from './CartTableRow.css';
+import { DeliveryType, SpecialRequest } from '../../redux/state';
 
 interface Props {
-  deliveryType: DeliveryType
-  name: string
-  options: SpecialRequest[]
-  unitPrice: number
-  quantity: number
+  deliveryType: DeliveryType;
+  name: string;
+  options: SpecialRequest[];
+  unitPrice: number;
+  quantity: number;
 }
 
 const CartTableRow: React.FC<Props> = (props: Props): JSX.Element => (
@@ -51,6 +51,6 @@ const CartTableRow: React.FC<Props> = (props: Props): JSX.Element => (
       </ul>
     </td>
   </tr>
-)
+);
 
-export default CartTableRow
+export default CartTableRow;

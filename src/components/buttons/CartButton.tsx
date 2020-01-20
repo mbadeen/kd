@@ -1,13 +1,13 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { cartSelector, totalQuantitySelector } from '../../redux/selectors'
-import ShoppingCartSVG from '../svg/ShoppingCartSVG'
-import styles from './CartButton.css'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { cartSelector, totalQuantitySelector } from '../../redux/selectors';
+import ShoppingCartSVG from '../svg/ShoppingCartSVG';
+import styles from './CartButton.css';
 
 const CartButton: React.FC = (): JSX.Element | null => {
-  const cart = useSelector(cartSelector)
-  const totalQuantity = useSelector(totalQuantitySelector)
+  const cart = useSelector(cartSelector);
+  const totalQuantity = useSelector(totalQuantitySelector);
 
   return cart.length > 0 ? (
     <Link to="/cart" className={styles.link} role="button">
@@ -15,7 +15,7 @@ const CartButton: React.FC = (): JSX.Element | null => {
       <ShoppingCartSVG />
       <span className={styles.span}>{totalQuantity}</span>
     </Link>
-  ) : null
-}
+  ) : null;
+};
 
-export default CartButton
+export default CartButton;

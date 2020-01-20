@@ -1,29 +1,29 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import addToCart from '../../redux/actions/cartActionCreators'
-import Checkbox from '../inputs/Checkbox'
-import Quantity from '../buttons/Quantity'
-import MealFlag from './MealFlag'
-import PrimaryButton from '../buttons/PrimaryButton'
-import { handleFlagMatch } from '../../util/functions'
-import { SpecialFlag, SpecialRequest } from '../../redux/state'
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import addToCart from '../../redux/actions/cartActionCreators';
+import Checkbox from '../inputs/Checkbox';
+import Quantity from '../buttons/Quantity';
+import MealFlag from './MealFlag';
+import PrimaryButton from '../buttons/PrimaryButton';
+import { handleFlagMatch } from '../../util/functions';
+import { SpecialFlag, SpecialRequest } from '../../redux/state';
 
-import styles from './MealCard.css'
+import styles from './MealCard.css';
 
 interface Props {
-  name: string
-  id: string
-  description: string
-  specialFlags: SpecialFlag[]
-  specialRequests: SpecialRequest[]
-  unitPrice: number
+  name: string;
+  id: string;
+  description: string;
+  specialFlags: SpecialFlag[];
+  specialRequests: SpecialRequest[];
+  unitPrice: number;
 }
 
 const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const [quantity, setQuantity] = useState<number>(0)
-  const [options, setOptions] = useState<SpecialRequest[]>([])
+  const [quantity, setQuantity] = useState<number>(0);
+  const [options, setOptions] = useState<SpecialRequest[]>([]);
 
   return (
     <article className={styles.article}>
@@ -108,16 +108,16 @@ const MealCard: React.FC<Props> = (props: Props): JSX.Element => {
                   quantity,
                   options
                 })
-              )
-              setQuantity(0)
-              setOptions([])
+              );
+              setQuantity(0);
+              setOptions([]);
             }}
             disabled={quantity === 0}
           />
         </div>
       </footer>
     </article>
-  )
-}
+  );
+};
 
-export default MealCard
+export default MealCard;

@@ -1,29 +1,29 @@
 export type AddressForm = {
-  deliveryType: DeliveryType
-  street: string
-  city: string
-  state: string
-  zip: string
-}
+  deliveryType: DeliveryType;
+  street: string;
+  city: string;
+  state: string;
+  zip: string;
+};
 
-export type DeliveryType = 'Delivery' | 'Pickup'
+export type DeliveryType = 'Delivery' | 'Pickup';
 
 export type LineItem = {
-  name: string
-  id: string
-  unitPrice: number
-  quantity: number
-  options: SpecialRequest[]
-}
+  name: string;
+  id: string;
+  unitPrice: number;
+  quantity: number;
+  options: SpecialRequest[];
+};
 
 export type Meal = {
-  name: string
-  id: number
-  unitPrice: number
-  description: string
-  specialFlags: SpecialFlag[]
-  specialRequests: SpecialRequest[]
-}
+  name: string;
+  id: number;
+  unitPrice: number;
+  description: string;
+  specialFlags: SpecialFlag[];
+  specialRequests: SpecialRequest[];
+};
 
 // export type Order = {
 //   address: Address
@@ -33,18 +33,18 @@ export type Meal = {
 // }
 
 export type SpecialFlag = {
-  flag: 'Gluten Free' | 'Vegetarian' | 'Spicy'
-  id: number
-}
+  flag: 'Gluten Free' | 'Vegetarian' | 'Spicy';
+  id: number;
+};
 
 export type SpecialRequest = {
-  id: number
-  label: string
-  unitPrice?: number
-}
+  id: number;
+  label: string;
+  unitPrice?: number;
+};
 
 export type State = {
-  menu: Meal[]
-  cart: LineItem[]
-  addressForm: AddressForm
-}
+  menu: Meal[];
+  cart: LineItem[];
+  addressForm: AddressForm;
+};

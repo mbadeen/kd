@@ -1,16 +1,16 @@
-import React, { ReactNode } from 'react'
-import styles from './Radio.css'
-import CheckmarkSVG from '../svg/CheckmarkSVG'
-import { OnChange } from '../types'
+import React, { ReactNode } from 'react';
+import styles from './Radio.css';
+import CheckmarkSVG from '../svg/CheckmarkSVG';
+import { OnChange } from '../types';
 
 interface Props {
-  checked: boolean
-  children?: ReactNode
-  htmlFor: string
-  id: string
-  name: string
-  onChange: OnChange
-  value: string
+  checked: boolean;
+  children?: ReactNode;
+  htmlFor: string;
+  id: string;
+  name: string;
+  onChange: OnChange;
+  value: string;
 }
 
 const Radio: React.FC<Props> = (props: Props): JSX.Element => (
@@ -31,10 +31,10 @@ const Radio: React.FC<Props> = (props: Props): JSX.Element => (
     ) : null}
     {props.children}
   </label>
-)
+);
 
-export default Radio
+export default Radio;
 
 Radio.defaultProps = {
   children: undefined
-}
+};

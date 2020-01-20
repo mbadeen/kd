@@ -1,3 +1,3 @@
-export type OnChange = (event: React.FormEvent<HTMLInputElement>) => void
+export type OnChange = (event: React.FormEvent<HTMLInputElement>) => void;
 
-export type OnClick = (event: React.MouseEvent) => void
+export type OnClick = (event: React.MouseEvent) => void;

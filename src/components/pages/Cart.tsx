@@ -1,14 +1,14 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { cartSelector } from '../../redux/selectors'
-import Section from '../layout/Section'
-import AddressForm from '../forms/AddressForm'
-import CartTable from '../tables/CartTable'
-import PrimaryButton from '../buttons/PrimaryButton'
-import styles from './Cart.css'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { cartSelector } from '../../redux/selectors';
+import Section from '../layout/Section';
+import AddressForm from '../forms/AddressForm';
+import CartTable from '../tables/CartTable';
+import PrimaryButton from '../buttons/PrimaryButton';
+import styles from './Cart.css';
 
 const Cart: React.FC = (): JSX.Element => {
-  const cart = useSelector(cartSelector)
+  const cart = useSelector(cartSelector);
 
   return cart.length > 0 ? (
     <>
@@ -35,7 +35,7 @@ const Cart: React.FC = (): JSX.Element => {
     <article className={styles.emptyCart}>
       <h1 className={styles.emptyCartTitle}>There are no items in your cart</h1>
     </article>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

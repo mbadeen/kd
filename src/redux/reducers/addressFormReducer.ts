@@ -5,8 +5,8 @@ import {
   SET_STATE,
   SET_ZIP,
   AddressFormActionTypes
-} from '../actions/addressFormActionTypes'
-import { AddressForm } from '../state'
+} from '../actions/addressFormActionTypes';
+import { AddressForm } from '../state';
 
 const initialState: AddressForm = {
   deliveryType: 'Pickup',
@@ -14,7 +14,7 @@ const initialState: AddressForm = {
   city: '',
   state: '',
   zip: ''
-}
+};
 
 const deliveryFormReducer = (state = initialState, action: AddressFormActionTypes): AddressForm => {
   switch (action.type) {
@@ -22,34 +22,34 @@ const deliveryFormReducer = (state = initialState, action: AddressFormActionType
       return {
         ...state,
         deliveryType: action.payload
-      }
+      };
 
     case SET_STREET:
       return {
         ...state,
         street: action.payload
-      }
+      };
 
     case SET_CITY:
       return {
         ...state,
         city: action.payload
-      }
+      };
 
     case SET_STATE:
       return {
         ...state,
         state: action.payload
-      }
+      };
 
     case SET_ZIP:
       return {
         ...state,
         zip: action.payload
-      }
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default deliveryFormReducer
+export default deliveryFormReducer;

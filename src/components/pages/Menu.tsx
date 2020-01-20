@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { menuSelector } from '../../redux/selectors'
-import Section from '../layout/Section'
-import MealCard from '../layout/MealCard'
-import { Meal } from '../../redux/state'
-import getMenu from '../../redux/thunks'
-import styles from './Menu.css'
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { menuSelector } from '../../redux/selectors';
+import Section from '../layout/Section';
+import MealCard from '../layout/MealCard';
+import { Meal } from '../../redux/state';
+import getMenu from '../../redux/thunks';
+import styles from './Menu.css';
 
 const Menu: React.FC = (): JSX.Element => {
-  const menu = useSelector(menuSelector)
-  const dispatch = useDispatch()
+  const menu = useSelector(menuSelector);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMenu())
-  }, [dispatch])
+    dispatch(getMenu());
+  }, [dispatch]);
 
   return (
     <Section>
@@ -42,7 +42,7 @@ const Menu: React.FC = (): JSX.Element => {
           )
         : null}
     </Section>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

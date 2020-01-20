@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from './CartTableHeader.css'
+import React from 'react';
+import styles from './CartTableHeader.css';
 
 const CartTableHeader: React.FC = (): JSX.Element => (
   <thead>
@@ -10,6 +10,6 @@ const CartTableHeader: React.FC = (): JSX.Element => (
       <td className={styles.price}>$</td>
     </tr>
   </thead>
-)
+);
 
-export default CartTableHeader
+export default CartTableHeader;

@@ -1,19 +1,19 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { setDeliveryType, setStreet, setState, setCity, setZip } from '../../redux/actions/addressFormActionCreators'
-import { addressFormSelector } from '../../redux/selectors'
-import Radio from '../inputs/Radio'
-import TextField from '../inputs/TextField'
-import pickupAddress from '../../util/constants'
-import styles from './AddressForm.css'
-import { DeliveryType } from '../../redux/state'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDeliveryType, setStreet, setState, setCity, setZip } from '../../redux/actions/addressFormActionCreators';
+import { addressFormSelector } from '../../redux/selectors';
+import Radio from '../inputs/Radio';
+import TextField from '../inputs/TextField';
+import pickupAddress from '../../util/constants';
+import styles from './AddressForm.css';
+import { DeliveryType } from '../../redux/state';
 
 const AddressForm: React.FC = (): JSX.Element => {
-  const addressForm = useSelector(addressFormSelector)
-  const dispatch = useDispatch()
+  const addressForm = useSelector(addressFormSelector);
+  const dispatch = useDispatch();
 
-  const delivery: boolean = addressForm.deliveryType === 'Delivery'
-  const pickup: boolean = addressForm.deliveryType === 'Pickup'
+  const delivery: boolean = addressForm.deliveryType === 'Delivery';
+  const pickup: boolean = addressForm.deliveryType === 'Pickup';
 
   return (
     <form className={styles.form}>
@@ -74,7 +74,7 @@ const AddressForm: React.FC = (): JSX.Element => {
         />
       </div>
     </form>
-  )
-}
+  );
+};
 
-export default AddressForm
+export default AddressForm;

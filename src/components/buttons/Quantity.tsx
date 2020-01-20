@@ -1,12 +1,12 @@
-import React from 'react'
-import { removeNonDigits, convertStringToNumber, handleQuantityBoundaries } from '../../util/functions'
-import styles from './Quantity.css'
+import React from 'react';
+import { removeNonDigits, convertStringToNumber, handleQuantityBoundaries } from '../../util/functions';
+import styles from './Quantity.css';
 
 interface Props {
-  setQuantity: React.Dispatch<React.SetStateAction<number>>
-  value: number
-  upperBoundary: number
-  lowerBoundary: number
+  setQuantity: React.Dispatch<React.SetStateAction<number>>;
+  value: number;
+  upperBoundary: number;
+  lowerBoundary: number;
 }
 
 const Quantity: React.FC<Props> = (props: Props): JSX.Element => (
@@ -44,6 +44,6 @@ const Quantity: React.FC<Props> = (props: Props): JSX.Element => (
       +
     </button>
   </div>
-)
+);
 
-export default Quantity
+export default Quantity;

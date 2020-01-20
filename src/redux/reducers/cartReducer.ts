@@ -1,7 +1,7 @@
-import ADD_TO_CART, { CartActionTypes } from '../actions/cartActionTypes'
-import { LineItem } from '../state'
+import ADD_TO_CART, { CartActionTypes } from '../actions/cartActionTypes';
+import { LineItem } from '../state';
 
-const initialState: LineItem[] = []
+const initialState: LineItem[] = [];
 
 const cartReducer = (state = initialState, action: CartActionTypes): LineItem[] => {
   switch (action.type) {
@@ -30,14 +30,14 @@ const cartReducer = (state = initialState, action: CartActionTypes): LineItem[] 
           lineItem.id === action.payload.id
             ? { ...lineItem, quantity: lineItem.quantity + action.payload.quantity }
             : lineItem
-        )
+        );
       }
-      return [...state, action.payload]
+      return [...state, action.payload];
     }
 
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default cartReducer
+export default cartReducer;

@@ -4,6 +4,6 @@ const pickupAddress = {
   city: 'Northville',
   state: 'MI',
   zip: '48167'
-}
+};
 
-export default pickupAddress
+export default pickupAddress;

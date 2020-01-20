@@ -1,15 +1,15 @@
-import SET_MENU, { MenuActionTypes } from '../actions/menuActionTypes'
-import { Meal } from '../state'
+import SET_MENU, { MenuActionTypes } from '../actions/menuActionTypes';
+import { Meal } from '../state';
 
-const initialState: Meal[] = []
+const initialState: Meal[] = [];
 
 const menuReducer = (state = initialState, action: MenuActionTypes): Meal[] => {
   switch (action.type) {
     case SET_MENU:
-      return action.payload
+      return action.payload;
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default menuReducer
+export default menuReducer;

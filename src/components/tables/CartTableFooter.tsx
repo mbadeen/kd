@@ -1,11 +1,11 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { deliveryTypeSelector, totalPriceSelector } from '../../redux/selectors'
-import styles from './CartTableFooter.css'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { deliveryTypeSelector, totalPriceSelector } from '../../redux/selectors';
+import styles from './CartTableFooter.css';
 
 const CartTableFooter: React.FC = () => {
-  const deliveryType = useSelector(deliveryTypeSelector)
-  const totalPrice = useSelector(totalPriceSelector)
+  const deliveryType = useSelector(deliveryTypeSelector);
+  const totalPrice = useSelector(totalPriceSelector);
 
   return (
     <tfoot>
@@ -18,7 +18,7 @@ const CartTableFooter: React.FC = () => {
         </td>
       </tr>
     </tfoot>
-  )
-}
+  );
+};
 
-export default CartTableFooter
+export default CartTableFooter;

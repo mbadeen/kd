@@ -1,4 +1,4 @@
-const tasks = hooksArray => hooksArray.join(' && ')
+const tasks = hooksArray => hooksArray.join(' && ');
 
 module.exports = {
   hooks: {
@@ -7,4 +7,4 @@ module.exports = {
     'post-merge': 'yarn install',
     'post-rewrite': 'yarn install'
   }
-}
+};

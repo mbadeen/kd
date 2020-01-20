@@ -1,15 +1,15 @@
-import React from 'react'
-import styles from './TextField.css'
-import { OnChange } from '../types'
+import React from 'react';
+import styles from './TextField.css';
+import { OnChange } from '../types';
 
 interface Props {
-  disabled: boolean
-  name: string
-  onChange: OnChange
-  maxLength?: number
-  minLength?: number
-  placeholder: string
-  value: string
+  disabled: boolean;
+  name: string;
+  onChange: OnChange;
+  maxLength?: number;
+  minLength?: number;
+  placeholder: string;
+  value: string;
 }
 const TextField: React.FC<Props> = (props: Props): JSX.Element => (
   <input
@@ -23,12 +23,12 @@ const TextField: React.FC<Props> = (props: Props): JSX.Element => (
     type="text"
     value={props.value}
   />
-)
+);
 
-export default TextField
+export default TextField;
 
 TextField.defaultProps = {
   disabled: false,
   maxLength: undefined,
   minLength: undefined
-}
+};

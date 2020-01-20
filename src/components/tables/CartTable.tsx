@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
-import { cartSelector, deliveryTypeSelector } from '../../redux/selectors'
-import CartTableHeader from './CartTableHeader'
-import CartTableRow from './CartTableRow'
-import CarttableFooter from './CartTableFooter'
-import { LineItem } from '../../redux/state'
-import styles from './CartTable.css'
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { cartSelector, deliveryTypeSelector } from '../../redux/selectors';
+import CartTableHeader from './CartTableHeader';
+import CartTableRow from './CartTableRow';
+import CarttableFooter from './CartTableFooter';
+import { LineItem } from '../../redux/state';
+import styles from './CartTable.css';
 
 const CartTable: React.FC = (): JSX.Element => {
-  const cart = useSelector(cartSelector)
-  const deliveryType = useSelector(deliveryTypeSelector)
+  const cart = useSelector(cartSelector);
+  const deliveryType = useSelector(deliveryTypeSelector);
 
-  const [deliveryFee, setDeliveryFee] = useState<boolean>(false)
+  const [deliveryFee, setDeliveryFee] = useState<boolean>(false);
 
   if (deliveryType === 'Delivery' && deliveryFee === false) {
-    setDeliveryFee(true)
+    setDeliveryFee(true);
   }
 
   return (
@@ -39,7 +39,7 @@ const CartTable: React.FC = (): JSX.Element => {
             className={deliveryType === 'Pickup' ? styles.none : styles.tr}
             onAnimationEnd={() => {
               if (deliveryFee) {
-                setDeliveryFee(false)
+                setDeliveryFee(false);
               }
             }}
           >
@@ -52,7 +52,7 @@ const CartTable: React.FC = (): JSX.Element => {
       </tbody>
       <CarttableFooter />
     </table>
-  )
-}
+  );
+};
 
-export default CartTable
+export default CartTable;

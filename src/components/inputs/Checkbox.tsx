@@ -1,14 +1,14 @@
-import React, { ReactNode } from 'react'
-import styles from './Checkbox.css'
-import { OnChange } from '../types'
+import React, { ReactNode } from 'react';
+import styles from './Checkbox.css';
+import { OnChange } from '../types';
 
 interface Props {
-  checked: boolean
-  children?: ReactNode
-  htmlFor?: string
-  id?: string
-  name?: string
-  onChange: OnChange
+  checked: boolean;
+  children?: ReactNode;
+  htmlFor?: string;
+  id?: string;
+  name?: string;
+  onChange: OnChange;
 }
 
 const Checkbox: React.FC<Props> = (props: Props): JSX.Element => (
@@ -23,10 +23,10 @@ const Checkbox: React.FC<Props> = (props: Props): JSX.Element => (
     />
     {props.children}
   </label>
-)
+);
 
-export default Checkbox
+export default Checkbox;
 
 Checkbox.defaultProps = {
   children: undefined
-}
+};
