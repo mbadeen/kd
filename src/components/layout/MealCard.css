@@ -12,7 +12,7 @@
 .title {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .flags {
@@ -36,11 +36,11 @@
 
 .buttons {
   align-self: center;
-  display: flex;
-  flex-direction: column;
-  height: 11rem;
-  justify-content: space-between;
   max-width: 18rem;
+}
+
+.buttons > div {
+  padding-bottom: 2rem;
 }
 
 .options {

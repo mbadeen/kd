@@ -35,10 +35,10 @@ const MealCard: React.FC<Props> = ({
   return (
     <article className={styles.article}>
       <header className={styles.header}>
-        <h2 className={styles.title}>
+        <h3 className={styles.title}>
           {name}
           <span className={styles.price}>{unitPrice}</span>
-        </h2>
+        </h3>
         <ul className={styles.flags}>
           {specialFlags.map(
             (specialFlag: SpecialFlag): JSX.Element => (

@@ -24,7 +24,7 @@
   animation-name: fadeIn;
   display: flex;
   justify-content: center;
-  height: 3.9rem;
+  height: 100%;
   position: absolute;
   right: 0;
   top: 0;

@@ -5,8 +5,11 @@
 .tr {
   animation-duration: 0.5s;
   animation-name: fadeIn;
-  height: 7.8rem;
   transition: all 0.5s ease;
+}
+
+.tr > td {
+  padding: 2rem 0;
 }
 
 .none {
@@ -35,7 +38,7 @@
 @keyframes fadeOut {
   from {
     font-size: 1.4rem;
-    height: 07.8rem;
+    height: 7.8rem;
     opacity: 1;
   }
 

@@ -73,8 +73,10 @@ input::placeholder {
   li,
   input,
   p,
-  tr {
+  td,
+  th {
     font-size: var(--font-size-15);
+    line-height: 2.75rem;
   }
 
   h1,
@@ -104,11 +106,8 @@ input::placeholder {
   input,
   p,
   td,
-  tr {
+  th {
     font-size: var(--font-size-16);
-  }
-
-  p {
     line-height: 3rem;
   }
 
@@ -139,11 +138,8 @@ input::placeholder {
   input,
   p,
   td,
-  tr {
+  th {
     font-size: var(--font-size-17);
-  }
-
-  p {
     line-height: 3.25rem;
   }
 
