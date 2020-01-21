@@ -3,6 +3,19 @@
   --montserrat: montserrat, sans-serif;
   --montserrat-bold: montserrat-bold, sans-serif;
 
+  /* font-sizes */
+  --font-size-28: 2.8rem;
+  --font-size-26: 2.6rem;
+  --font-size-24: 2.4rem;
+  --font-size-22: 2.2rem;
+  --font-size-20: 2rem;
+  --font-size-18: 1.8rem;
+  --font-size-17: 1.7rem;
+  --font-size-16: 1.6rem;
+  --font-size-15: 1.5rem;
+  --font-size-14: 1.4rem;
+  --font-size-12: 1.2rem;
+
   /* font-weights */
   --regular: 400;
   --bold: 700;
@@ -17,7 +30,7 @@ p,
 td {
   font-family: var(--montserrat);
   font-weight: var(--regular);
-  font-size: 1.4rem;
+  font-size: var(--font-size-14);
   line-height: 2.5rem;
 }
 
@@ -38,15 +51,15 @@ h3 {
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: var(--font-size-22);
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: var(--font-size-18);
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: var(--font-size-14);
 }
 
 input::placeholder {
@@ -61,7 +74,7 @@ input::placeholder {
   input,
   p,
   tr {
-    font-size: 1.5rem;
+    font-size: var(--font-size-15);
   }
 
   h1,
@@ -71,15 +84,15 @@ input::placeholder {
   }
 
   h1 {
-    font-size: 2.4rem;
+    font-size: var(--font-size-24);
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: var(--font-size-20);
   }
 
   h3 {
-    font-size: 1.6rem;
+    font-size: var(--font-size-16);
   }
 }
 
@@ -92,7 +105,7 @@ input::placeholder {
   p,
   td,
   tr {
-    font-size: 1.6rem;
+    font-size: var(--font-size-16);
   }
 
   p {
@@ -106,14 +119,49 @@ input::placeholder {
   }
 
   h1 {
-    font-size: 2.6rem;
+    font-size: var(--font-size-26);
   }
 
   h2 {
-    font-size: 2.2rem;
+    font-size: var(--font-size-22);
   }
 
   h3 {
-    font-size: 1.8rem;
+    font-size: var(--font-size-18);
+  }
+}
+
+@media (min-width: 992px) {
+  a,
+  button,
+  label,
+  li,
+  input,
+  p,
+  td,
+  tr {
+    font-size: var(--font-size-17);
+  }
+
+  p {
+    line-height: 3.25rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    padding-bottom: 1.75rem;
+  }
+
+  h1 {
+    font-size: var(--font-size-28);
+  }
+
+  h2 {
+    font-size: var(--font-size-24);
+  }
+
+  h3 {
+    font-size: var(--font-size-20);
   }
 }
