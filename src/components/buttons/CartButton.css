@@ -14,13 +14,16 @@
 }
 
 .span {
+  align-items: center;
   background-color: #000;
   border-radius: 50%;
-  height: 2.25rem;
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
   position: absolute;
   text-align: center;
   top: 0.5rem;
-  width: 2.25rem;
+  width: 2.5rem;
   right: 1rem;
 }
 
