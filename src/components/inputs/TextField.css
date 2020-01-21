@@ -4,7 +4,6 @@
   border-left: none;
   border-right: none;
   border-top: none;
-  font-size: 1.5rem;
   outline: none;
   padding: 2.5rem 1rem 1rem 1rem;
   transition: all 0.4s ease;
@@ -13,7 +12,6 @@
 
 .input::placeholder {
   color: #b3b3b3;
-  font-style: italic;
 }
 
 .input:active,

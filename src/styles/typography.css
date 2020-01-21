@@ -1,0 +1,119 @@
+:root {
+  /* font-families */
+  --montserrat: montserrat, sans-serif;
+  --montserrat-bold: montserrat-bold, sans-serif;
+
+  /* font-weights */
+  --regular: 400;
+  --bold: 700;
+}
+
+a,
+button,
+label,
+li,
+input,
+p,
+td {
+  font-family: var(--montserrat);
+  font-weight: var(--regular);
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+
+h1,
+h2,
+h3,
+thead td,
+tfoot th {
+  font-family: var(--montserrat-bold);
+  font-weight: var(--bold);
+  line-height: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  padding-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+input::placeholder {
+  font-style: italic;
+}
+
+@media (min-width: 576px) {
+  a,
+  button,
+  label,
+  li,
+  input,
+  p,
+  tr {
+    font-size: 1.5rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    padding-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  a,
+  button,
+  label,
+  li,
+  input,
+  p,
+  td,
+  tr {
+    font-size: 1.6rem;
+  }
+
+  p {
+    line-height: 3rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    padding-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+}

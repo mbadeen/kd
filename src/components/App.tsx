@@ -6,7 +6,7 @@ import Main from './layout/Main';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Cart from './pages/Cart';
-import '../styles/base.css';
+import '../styles/main.css';
 
 const App: React.FC = (): JSX.Element => (
   <>
