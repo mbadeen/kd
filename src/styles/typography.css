@@ -14,11 +14,13 @@
   --font-size-16: 1.6rem;
   --font-size-15: 1.5rem;
   --font-size-14: 1.4rem;
+  --font-size-13: 1.3rem;
   --font-size-12: 1.2rem;
 
-  /* font-weights */
+  /* font-weights / styles */
   --regular: 400;
   --bold: 700;
+  --italic: italic;
 }
 
 a,
@@ -63,7 +65,7 @@ h3 {
 }
 
 input::placeholder {
-  font-style: italic;
+  font-style: var(--italic);
 }
 
 @media (min-width: 576px) {
