@@ -1,12 +1,12 @@
 .tr {
   border-bottom: 0.1rem solid #eee;
   border-top: 0.1rem solid #eee;
-  color: #b3b3b3;
   height: 5rem;
   text-transform: uppercase;
 }
 
 .total {
+  color: #b3b3b3;
   text-align: left;
 }
 

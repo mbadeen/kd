@@ -8,11 +8,12 @@
 }
 
 .tr > td {
+  font-family: var(--montserrat-semi-bold);
   padding: 2rem 0;
 }
 
 .li {
-  font-size: var(--font-size-12);
+  font-size: var(--font-size-14);
   font-style: var(--italic);
   padding-top: 1rem;
 }
@@ -26,15 +27,9 @@
   text-align: right;
 }
 
-@media (min-width: 576px) {
-  .li {
-    font-size: var(--font-size-13);
-  }
-}
-
 @media (min-width: 768px) {
   .li {
-    font-size: var(--font-size-14);
+    font-size: var(--font-size-15);
   }
 }
 

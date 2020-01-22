@@ -1,6 +1,7 @@
 :root {
   /* font-families */
   --montserrat: montserrat, sans-serif;
+  --montserrat-semi-bold: montserrat-semi-bold, sans-serif;
   --montserrat-bold: montserrat-bold, sans-serif;
 
   /* font-sizes */

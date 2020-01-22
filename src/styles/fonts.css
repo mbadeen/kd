@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: 'montserrat-semi-bold';
+  src: url('../assets/fonts/montserrat-semi-bold.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'montserrat-bold';
   src: url('../assets/fonts/montserrat-bold.ttf') format('truetype');
 }
