@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { deliveryTypeSelector, totalPriceSelector } from '../../redux/selectors';
 import styles from './CartTableFooter.css';
 
-const CartTableFooter: React.FC = () => {
+const CartTableFooter: React.FC = (): JSX.Element => {
   const deliveryType = useSelector(deliveryTypeSelector);
   const totalPrice = useSelector(totalPriceSelector);
 

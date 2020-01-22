@@ -41,7 +41,8 @@ h1,
 h2,
 h3,
 thead td,
-tfoot th {
+tfoot th,
+tfoot td {
   font-family: var(--montserrat-bold);
   font-weight: var(--bold);
   line-height: 3rem;
@@ -61,7 +62,10 @@ h2 {
   font-size: var(--font-size-18);
 }
 
-h3 {
+h3,
+thead td,
+tfoot th,
+tfoot td {
   font-size: var(--font-size-14);
 }
 
@@ -96,7 +100,10 @@ input::placeholder {
     font-size: var(--font-size-20);
   }
 
-  h3 {
+  h3,
+  thead td,
+  tfoot th,
+  tfoot td {
     font-size: var(--font-size-16);
   }
 }
@@ -128,7 +135,10 @@ input::placeholder {
     font-size: var(--font-size-22);
   }
 
-  h3 {
+  h3,
+  thead td,
+  tfoot th,
+  tfoot td {
     font-size: var(--font-size-18);
   }
 }
@@ -160,7 +170,10 @@ input::placeholder {
     font-size: var(--font-size-24);
   }
 
-  h3 {
+  h3,
+  thead td,
+  tfoot th,
+  tfoot td {
     font-size: var(--font-size-20);
   }
 }
